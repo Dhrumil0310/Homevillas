@@ -706,6 +706,110 @@ th {
   text-align: center;
 }
 
+/*Property details*/
+
+.mycont {
+  background-color: #f1f1f1 !important;
+}
+
+.keymain {
+  background-color: #fff !important;
+  padding: 30px;
+}
+
+.amenities h3,
+.virtual h3,
+.keymain h3,
+.yelp h3,
+.floor h3,
+.walk h3,
+.freq h3,
+.envi h3 {
+  font-size: 18px;
+  font-family: "RALEWAY", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.keymain p {
+  font-size: 14px;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 400;
+  color: #777777 !important;
+}
+
+.keymain .open {
+  line-height: 8px;
+}
+
+.kitchen p {
+  line-height: 8px;
+}
+
+.amenities {
+  padding: 30px;
+  margin: 40px 0px;
+  background-color: #fff !important;
+}
+
+.amenities p {
+  font-size: 14px;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 400;
+}
+
+.virtual {
+  margin: 40px 0;
+  background-color: #fff;
+  padding: 30px 10px;
+}
+
+.yelp {
+  background-color: #fff;
+  padding: 20px 10px;
+}
+
+.yelp h5 {
+  font-size: 14px;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.yelp p {
+  font-size: 12px;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 600;
+  color: #a3a3a3 !important;
+  letter-spacing: 1.2px;
+}
+
+.walk {
+  margin: 40px 0;
+  background-color: #fff;
+  padding: 20px 10px;
+}
+
+.floor {
+  background-color: #fff;
+  padding: 20px 10px;
+}
+
+.floor .myimage {
+  text-align: center;
+  width: 100%;
+}
+
+.freq {
+  margin: 40px 0;
+  background-color: #fff;
+  padding: 30px 20px;
+}
+
+.envi p {
+  color: #8b778b !important;
+}
+
 @media screen and (max-width: 768px) {
   .topnav .col-md-8 {
     text-align: center;
