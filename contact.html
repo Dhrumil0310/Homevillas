@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Karla:wght@700&family=Raleway:wght@600&family=Roboto:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/aos.css" />
+  </head>
+  <body>
+
+    <section class="topnav">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <img src="images/homevillas-logo.png" alt="" />
+          </div>
+          <div class="col-md-2 text-right" style="float: right;">
+            <p class="text-center">
+              <span class="call">Call for Enquiry</span>
+              <br />
+              202-555-0182
+            </p>
+          </div>
+          <div class="col-md-2 thisbutton" style="float: right;">
+            <button type="button" class="btn btn-outline-danger mybutton">
+              CREATE PROPERTY
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="container navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              LISTINGS
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              PROPERTY
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              MEMBERS
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              PAGES
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="about.html">ABOUT US</a>
+              <a class="dropdown-item" href="faq.html">FAQ</a>
+              <a class="dropdown-item" href="agencylist.html">AGENCY LIST</a>
+              <a class="dropdown-item" href="pagenotfound.html">404 PAGE</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">BLOG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fab fa-facebook-f icons mr-1"></i>
+              <i class="fab fa-twitter icons mr-1"></i>
+              <i class="fab fa-linkedin-in icons mr-1"></i>
+              <i class="fab fa-instagram icons mr-1"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-user icons mr-1"></i>
+              Sign Up/ Register
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <section class="info">
+      <div class="row">
+        <div class="col-md-6 map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7546.966106449064!2d72.80770652085317!3d18.95426244863126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce0f115aae39%3A0x66ef35bcecb08dfe!2sChowpatty%2C%20Girgaon%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1591528982355!5m2!1sen!2sin" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div class="col-md-6 cont">
+          <p class="cinfo">Contact Info</p>
+          <p class="please">
+            Please note we do not sell houses, we are an advertising platform.
+            <br> 
+            For any
+            <br>
+            questions regarding a listing please contact the real estate agent
+            <br>
+             who has
+             <br>
+            placed the property ad.
+            </p>
+            <div class="row">
+              <div class="col-md-1" style="text-align: center;" id="social1">
+                <a class=" mdGlobalBtn" href="#"
+                ><i class="fas fa-map"></i>
+              </a>
+              </div>
+              <div class="col-md-6">
+                <p>Address:
+                  <br>
+                  Practical Components, Inc.
+                  10762  Noel Street Los Alamitos
+                  CA 90720, United States of Amarica</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-1" style="text-align: center;" id="social1">
+                <a class="mdGlobalBtn" href="#"
+                ><i class="fas fa-phone-alt"></i>
+              </a>
+              </div>
+              <div class="col-md-6">
+                <p>Phone:
+                  <br>
+                  (0044) 123 456 7891</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-1" style="text-align: center;" id="social1">
+                <a class="mdGlobalBtn" href="#"
+                ><i class="fas fa-fax"></i>
+              </a>
+              </div>
+              <div class="col-md-6">
+                <p>Address:
+                  <br>
+                    Fax:
+                    (001) 123 456 7891</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-1" style="text-align: center;" id="social1">
+                <a class="mdGlobalBtn" href="#"
+                ><i class="fas fa-envelope"></i>
+              </a>
+              </div>
+              <div class="col-md-6">
+                <p>Email Address;
+                  <br>
+                  info@example.com</p>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="contact">
+      <div class="container ">
+        <div class="text-center">
+        <p class="quick">Quick Inquiry</p>
+        <p class="des">
+          Easy to use yet one of the most powerful admin panel of the
+          marketplace.
+          <br />
+          Theme Options, drag & drop Page builder and much more...
+        </p>
+      </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="fname">Name *</label>
+              <input type="text" id="fname" name="firstname" placeholder=" First Name & Last Name" required>
+            </div>
+            <div class="col-md-6">
+              <label for="lname">Email *</label>
+              <input type="text" id="lname" name="lastname" placeholder="Example@domain.com" required>
+            </div>
+            <div class="col-md-6">
+              <label for="fname">Phone Number</label>
+              <input type="text" id="fname" name="firstname" placeholder="773.702.XXXX">
+            </div>
+            <div class="col-md-6">
+              <label for="fname">Subject</label>
+              <input type="text" id="fname" name="firstname" placeholder="About this Listing">
+            </div>
+            <div class="col-md-12">
+              <label for="subject">Message</label>
+              <textarea id="subject" name="subject" placeholder="Text Here" style="height:200px"></textarea>
+            </div>
+            <div class="text-center" style="margin:0 auto;">
+              <button class="button1">SEND A MESSAGE</button>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+    <section class="Testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-center m-auto">
+            <h2>Testimonials</h2>
+            <h5>WE HAVE THE RIGHT PROPERTIES NEEDS.</h5>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#myCarousel"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="item carousel-item active">
+                  <div class="img-box">
+                    <img src="images/testimonial-thumbnail3.jpg" alt="" />
+                  </div>
+                  <p class="testimonial">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                    eu sem tempor, varius quam at, luctus dui. Mauris magna
+                    metus, dapibus nec turpis vel, semper malesuada ante. Idac
+                    bibendum scelerisque non non purus. Suspendisse varius nibh
+                    non aliquet.
+                  </p>
+                  <p class="overview"><b>Paula Wilson</b>, Media Analyst</p>
+                </div>
+                <div class="item carousel-item">
+                  <div class="img-box">
+                    <img src="images/testimonial-thumbnail1.jpg" alt="" />
+                  </div>
+                  <p class="testimonial">
+                    Vestibulum quis quam ut magna consequat faucibus.
+                    Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus
+                    dictum risus. Pellentesque viverra sagittis quam at mattis.
+                    Suspendisse potenti. Aliquam sit amet gravida nibh,
+                    facilisis gravida odio.
+                  </p>
+                  <p class="overview"><b>Antonio Moreno</b>, Web Developer</p>
+                </div>
+                <div class="item carousel-item">
+                  <div class="img-box">
+                    <img src="images/testimonial-thumbnail4.jpg" alt="" />
+                  </div>
+                  <p class="testimonial">
+                    Phasellus vitae suscipit justo. Mauris pharetra feugiat ante
+                    id lacinia. Etiam faucibus mauris id tempor egestas. Duis
+                    luctus turpis at accumsan tincidunt. Phasellus risus risus,
+                    volutpat vel tellus ac, tincidunt fringilla massa. Etiam
+                    hendrerit dolor eget rutrum.
+                  </p>
+                  <p class="overview"><b>Michael Holz</b>, Seo Analyst</p>
+                </div>
+              </div>
+              <a
+                class="carousel-control left carousel-control-prev"
+                href="#myCarousel"
+                data-slide="prev"
+              >
+                <i class="fa fa-angle-left icon"></i>
+              </a>
+              <a
+                class="carousel-control right carousel-control-next"
+                href="#myCarousel"
+                data-slide="next"
+              >
+                <i class="fa fa-angle-right icon" style="color: black;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="brands">
+      <div class="container text-center">
+        <div class="row">
+          <img src="images/partner03.png" alt="" />
+          <img src="images/partner05.png" alt="" />
+          <img src="images/partner04.png" alt="" />
+          <img src="images/partner06.png" alt="" />
+          <img src="images/partner08.png" alt="" />
+          <img src="images/partner09.png" alt="" />
+          <img src="images/partner10.png" alt="" />
+          <img src="images/partner11.png" alt="" />
+          <img src="images/partner12.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>Home &nbsp Members &nbsp FAQS &nbsp Blog &nbsp Contact US</p>
+            <br />
+            <p>© 2020 REALESTATE. ALL RIGHTS RESERVED. CHIMPSTUDIO</p>
+          </div>
+          <div class="col-md-6 text-right socially">
+            <div id="social">
+              <a class="facebookBtn smGlobalBtn" href="#"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="twitterBtn smGlobalBtn" href="#"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="googleplusBtn smGlobalBtn" href="#"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a class="linkedinBtn smGlobalBtn" href="#"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+            <br />
+            <div class="mydiv">
+              <img class="myimage" src="images/app-image1.png" alt="" />
+              <img class="myimage" src="images/app-image2.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script src="./js/aos.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+      integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/multi.js"></script>
+    <script>
+      var preloader = document.getElementById("loading");
+
+      function myFunction() {
+        preloader.style.display = "none";
+      }
+
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+      AOS.init({ duration: 2000 });
+    </script>
+  </body>
+</html>

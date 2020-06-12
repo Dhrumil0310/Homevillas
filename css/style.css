@@ -1,0 +1,734 @@
+/*index.html*/
+
+html,
+body {
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.topnav {
+  padding-top: 10px;
+  padding-bottom: 0;
+}
+
+.topnav .call {
+  font-family: "ROBOTO", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.topnav p {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.topnav .mybutton {
+  font-family: "ROBOTO", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.topnav .thisbutton {
+  margin-top: 10px;
+}
+
+/*navbar*/
+
+.navbar {
+  background-color: #5a2e8a !important;
+  z-index: 9999;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.navbar a {
+  color: #fff !important;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: none;
+}
+
+.navbar .icons {
+  color: #fff !important;
+  font-size: 17px;
+}
+
+.navbar .dropdown .dropdown-menu .dropdown-item {
+  color: black !important;
+}
+
+.section1 {
+  padding: 150px 0;
+  background: url("../images/section1.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.section1 h3 {
+  font-family: "ROBOTO", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+}
+
+.section1 h5 {
+  font-family: "ROBOTO", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+  letter-spacing: 1.5px;
+}
+
+.section1 p {
+  font-family: "ROBOTO", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+  letter-spacing: 1.5px;
+}
+
+.features {
+  background-color: #f1f1f1 !important;
+  padding: 70px 0;
+}
+
+.features .col-md-4 {
+  padding-top: 40px;
+}
+
+.texts {
+  padding: 50px 0;
+}
+
+.texts h5 {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.texts p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5a76c0 !important;
+  line-height: 28px;
+}
+
+.tasks {
+  padding: 70px 0;
+  background-color: #f1f1f1 !important;
+}
+
+.tasks .myimage {
+  height: 80px;
+}
+
+.tasks h5 {
+  padding: 20px 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.tasks h1 {
+  padding: 35px 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #5a2e8a !important;
+}
+
+/*testimonials*/
+
+.Testimonials {
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.Testimonials h2 {
+  color: #5a2e8a !important;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "RALEWAY", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  letter-spacing: 2px;
+}
+
+.Testimonials h5 {
+  color: #e0dcd7 !important;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.Testimonials .col-center {
+  margin: 0 auto;
+  float: none !important;
+}
+.Testimonials .carousel {
+  margin: 50px auto;
+  padding: 0 70px;
+}
+.Testimonials .carousel .item {
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  min-height: 290px;
+}
+.Testimonials .carousel .item .img-box {
+  width: 135px;
+  height: 135px;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+.Testimonials .carousel .img-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+}
+.Testimonials .carousel .testimonial {
+  padding: 30px 0 10px;
+}
+.Testimonials .carousel .overview {
+  font-style: italic;
+}
+.Testimonials .carousel .overview b {
+  text-transform: uppercase;
+  color: #7aa641;
+}
+.Testimonials .carousel .carousel-control {
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  top: 50%;
+  background: none;
+}
+.Testimonials .carousel-control .icon {
+  font-size: 35px;
+  line-height: 42px;
+  position: absolute;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+.Testimonials .carousel .carousel-indicators {
+  bottom: -40px;
+}
+.Testimonials .carousel-indicators li {
+  width: 20px;
+  height: 1px;
+  margin: 1px 3px;
+  border-radius: 50%;
+}
+
+.Testimonials .carousel-indicators li.active {
+  width: 20px;
+  height: 1px;
+  margin: 1px 3px;
+  border-radius: 50%;
+}
+
+.Testimonials .carousel-indicators li {
+  background: #999;
+  border-color: transparent;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.Testimonials .carousel-indicators li.active {
+  background: #555;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/*brands*/
+
+.brands {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #f1f1f1 !important;
+}
+
+.brands img {
+  padding: 10px;
+  width: 120px;
+}
+
+/*footer*/
+
+.footer {
+  padding: 30px 0;
+}
+
+.footer p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#social {
+  text-align: right;
+}
+
+#social .smGlobalBtn {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 33px;
+  height: 33px;
+  box-shadow: 0 3px 3px #999;
+  padding: 0px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 27px;
+  background-color: #9c5555;
+}
+
+.facebookBtn:hover {
+  background: #d64521 !important;
+}
+
+.twitterBtn:hover {
+  background: #d64521 !important;
+}
+
+.googleplusBtn:hover {
+  background: #d64521 !important;
+}
+
+.linkedinBtn:hover {
+  background: #d64521 !important;
+}
+
+/*contact*/
+
+.contact {
+  margin-top: 0;
+  padding: 50px 0;
+  background-color: #f2f2f2;
+}
+
+.info .map {
+  height: 100%;
+}
+
+.info .cont {
+  padding: 50px;
+}
+
+.info .cinfo {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "RALEWAY", sans-serif;
+}
+
+.info .please {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "ROBOTO", sans-serif;
+  color: #95888d !important;
+}
+
+#social1 .mdGlobalBtn {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 33px;
+  height: 33px;
+  box-shadow: 0 3px 3px #999;
+  padding: 0px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 27px;
+  background-color: #5a2e8a !important;
+}
+
+.contact input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.contact input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.contact .container {
+  border-radius: 5px;
+}
+
+.contact .quick {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "RALEWAY", sans-serif;
+}
+
+.contact .button1 {
+  padding: 10px 20px;
+  color: #fff;
+  border: 1px solid #d64521 !important;
+  background-color: #d64521 !important;
+}
+
+.contact .button1:hover {
+  border: 1px solid #d64521 !important;
+  color: #d64521 !important;
+  background-color: #fff !important;
+}
+
+/*ABOUT*/
+
+.whoweare {
+  padding: 80px 0;
+}
+
+.whoweare .who {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "RALEWAY", sans-serif;
+}
+
+.whoweare {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "ROBOTO", sans-serif;
+}
+
+.whoweare .head {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "RALEWAY", sans-serif;
+  letter-spacing: 2px;
+}
+
+.des {
+  color: #8d778d !important;
+}
+
+.Homevillas {
+  padding: 80px 0;
+}
+
+.Homevillas .home {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "RALEWAY", sans-serif;
+}
+
+.Homevillas .card-img-top {
+  width: 60%;
+  margin: 30px auto;
+}
+
+.Homevillas .card-body {
+  background-color: #fafbfb !important;
+  border-top: 1px solid #dfdfdf;
+  text-align: left;
+}
+
+.Homevillas .card-title {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "RALEWAY", sans-serif;
+  letter-spacing: 2px;
+}
+
+.Homevillas .card-text {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "ROBOTO", sans-serif;
+  color: #7a5555 !important;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+
+.find {
+  padding: 30px 0;
+  position: relative;
+  background: url("../images/world-political-maps.jpg") no-repeat center;
+}
+
+.find h3 {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "RALEWAY", sans-serif;
+  color: #fff;
+  z-index: 99999;
+}
+
+.find .head {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "RALEWAY", sans-serif;
+  color: white;
+}
+
+.find .para {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "ROBOTO", sans-serif;
+  color: #fff;
+}
+
+.find .icon {
+  margin-top: 20px;
+  height: 30px;
+  width: 30px;
+  color: #fff;
+}
+
+.overlay {
+  background: rgba(122, 85, 85, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sell {
+  padding: 70px 0;
+  background: #f1f1f1;
+}
+
+.sell h3 {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "RALEWAY", sans-serif;
+  font-style: normal;
+}
+
+.sell .parent {
+  color: #777777;
+}
+
+.sell .touch {
+  background: #5a2e8a !important;
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+}
+
+.leadership {
+  padding: 80px 0;
+}
+
+.leadership p {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "RALEWAY", sans-serif;
+}
+
+.leadership .myimage {
+  padding-top: 3px;
+}
+
+/*page not found*/
+
+.pagenotfound {
+  padding: 130px 0;
+  background-color: #f1f1f1;
+}
+
+.pagenotfound .box {
+  background-color: #fff;
+  width: 50%;
+  padding: 40px 0;
+}
+
+.pagenotfound .not {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "ROBOTO", sans-serif;
+  color: #777777;
+}
+
+.pagenotfound .your {
+  padding: 3px 14px;
+}
+
+.pagenotfound .but {
+  background-color: #d64521 !important;
+  color: #fff !important;
+  border: 2px solid #d64521 !important;
+  padding: 3px 14px;
+}
+
+.pagenotfound .num {
+  color: #d64521 !important;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "ROBOTO", sans-serif;
+}
+
+.pagenotfound .des1 {
+  color: #777777;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "ROBOTO", sans-serif;
+  letter-spacing: 1.2px;
+}
+
+/*FAQ*/
+
+.accordion {
+  margin: 10px 0;
+  font-size: 22px;
+  font-family: "Pridi", sans-serif;
+  background-color: #f3f3f3;
+  color: #444;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border: 0.2px solid #f4f4f4;
+  outline: none;
+  transition: 0.4s;
+}
+
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.faq {
+  background: #f1f1f1;
+  text-align: center;
+  padding: 80px 0;
+}
+
+/*agency*/
+
+.agency {
+  padding: 80px 0;
+  background: #f1f1f1;
+}
+
+.agency .col-md-4 {
+  margin: 20px 0;
+}
+
+.agency .card-img-top {
+  /* border: 1px solid blue;
+  border-radius: 50%;*/
+  padding: 20px 0;
+  height: 50%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*member packages*/
+
+table {
+  font-family: arial, sans-serif;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .topnav .col-md-8 {
+    text-align: center;
+  }
+
+  .topnav .col-md-2 {
+    text-align: center;
+  }
+  .topnav {
+    padding-bottom: 18px;
+  }
+
+  .topnav .thisbutton {
+    margin-top: 0;
+  }
+
+  .navbar .nav-item .nav-link {
+    float: left;
+    text-align: left;
+  }
+
+  .pagenotfound .container {
+    width: 100%;
+  }
+
+  .footer .col-md-6 {
+    text-align: center;
+    float: center;
+  }
+  .footer #social {
+    text-align: center;
+  }
+
+  .footer .mydiv {
+    text-align: center;
+  }
+
+  .info .cont .please {
+    text-align: left;
+  }
+
+  .info .cont {
+    text-align: center;
+  }
+}
