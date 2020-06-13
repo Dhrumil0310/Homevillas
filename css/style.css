@@ -712,7 +712,124 @@ th {
   background-color: #f1f1f1 !important;
 }
 
+.mybutton1 {
+  color: #fff !important;
+  background-color: #5a2e8a !important;
+  border: none;
+  height: 100px;
+  width: 100px;
+  font-size: 14px;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.mybutton1 .icons,
+.mybutton2 .icons {
+  font-size: 25px;
+}
+
+.mybutton2 {
+  color: #fff !important;
+  background-color: #d64521 !important;
+  border: none;
+  height: 100px;
+  width: 100px;
+  font-size: 14px;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.caro .cont {
+  position: relative;
+}
+
+/* Hide the images by default */
+.caro .mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.caro .cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.caro .prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.caro .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.caro .prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.caro .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caro .caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.caro .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.caro .column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.caro .demo {
+  opacity: 0.6;
+}
+
+.caro .active,
+.demo:hover {
+  opacity: 1;
+}
+
+.First {
+  margin: 40px 0px;
+}
+
 .keymain {
+  margin-top: 40px;
   background-color: #fff !important;
   padding: 30px;
 }
@@ -724,7 +841,9 @@ th {
 .floor h3,
 .walk h3,
 .freq h3,
-.envi h3 {
+.envi h3,
+.files h3,
+.properties h3 {
   font-size: 18px;
   font-family: "RALEWAY", sans-serif;
   font-weight: 600;
@@ -790,6 +909,10 @@ th {
   padding: 20px 10px;
 }
 
+.walk .icon {
+  font-size: 40px;
+}
+
 .floor {
   background-color: #fff;
   padding: 20px 10px;
@@ -806,8 +929,51 @@ th {
   padding: 30px 20px;
 }
 
-.envi p {
+.envi p,
+ul {
   color: #8b778b !important;
+}
+
+.files .col-md-3 {
+  line-height: 10px;
+}
+
+.reqdetails,
+.files {
+  margin: 40px 0;
+  background-color: #fff;
+  padding: 30px 20px;
+}
+
+.mycont .captchacont {
+  margin: 40px 0px;
+  background-color: #fff;
+  padding: 30px 10px;
+  background-color: #fff;
+  height: 100%;
+}
+
+.properties {
+  background-color: #f7f7f7;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.captchacont input {
+  width: 100%;
+  margin: 5px 0;
+  padding: 5px;
+  border: 1px solid #e4e4e4;
+}
+
+#message {
+  border: 1px solid #e4e4e4;
+}
+
+/*listings*/
+
+.propsort .card {
+  background-color: #f1f1f1;
 }
 
 @media screen and (max-width: 768px) {
