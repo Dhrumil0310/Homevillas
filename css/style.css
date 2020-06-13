@@ -945,6 +945,10 @@ ul {
   padding: 30px 20px;
 }
 
+.reqdetails .mybutton {
+  margin-top: 30px;
+}
+
 .mycont .captchacont {
   margin: 40px 0px;
   background-color: #fff;
@@ -964,6 +968,21 @@ ul {
   margin: 5px 0;
   padding: 5px;
   border: 1px solid #e4e4e4;
+}
+.captchacont .g-recaptcha {
+  width: 100%;
+}
+.captchacont .conbutton {
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  background-color: #d64521 !important;
+  padding: 10px 0;
+  color: #fff !important;
+  font-size: 14px;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 #message {
