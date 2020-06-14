@@ -765,7 +765,7 @@ th {
   width: auto;
   padding: 16px;
   margin-top: -50px;
-  color: white;
+  color: black !important;
   font-weight: bold;
   font-size: 20px;
   border-radius: 0 3px 3px 0;
@@ -775,6 +775,7 @@ th {
 
 /* Position the "next button" to the right */
 .caro .next {
+  color: black !important;
   right: 0;
   border-radius: 3px 0 0 3px;
 }
@@ -783,6 +784,7 @@ th {
 .caro .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+  color: #fff !important;
 }
 
 /* Number text (1/3 etc) */
@@ -848,6 +850,23 @@ th {
   font-family: "RALEWAY", sans-serif;
   font-weight: 600;
   letter-spacing: 1.5px;
+}
+
+.First .num {
+  font-size: 20px;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 600;
+  color: red !important;
+}
+
+.First .anc {
+  color: red !important;
+}
+
+.First h3 {
+  font-size: 22px;
+  font-family: "RALEWAY", sans-serif;
+  font-weight: 600;
 }
 
 .keymain p {
@@ -961,6 +980,26 @@ ul {
   background-color: #f7f7f7;
   padding-top: 50px;
   padding-bottom: 100px;
+}
+
+.properties .card-title {
+  font-size: 18px;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 600;
+  color: red !important;
+}
+
+.properties .card a {
+  font-size: 18px;
+  font-family: "RALEWAY", sans-serif;
+  font-weight: 600;
+}
+
+.properties p {
+  color: #777777 !important;
+  font-size: 14px;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 600;
 }
 
 .captchacont input {
