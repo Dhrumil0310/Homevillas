@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./css/aos.css" />
   </head>
   <body>
+
     <section class="topnav">
       <div class="container">
         <div class="row">
@@ -153,31 +154,103 @@
     </nav>
 
     <section class="propsort">
-      <div class="container">
+      <div class="container maincon">
         <div class="row">
-          <div class="col-md-4">
-            <div></div>
-            <div>
+          <div class="col-md-3">
+            <div class="PropertyT container">
+              <br>
               <h3>PROPERTY TYPES</h3>
+              <p>Houses</p>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+              <label for="vehicle1"> Bungalow</label><br>
+              <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+              <label for="vehicle2"> Commercial</label><br>
+              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+              <label for="vehicle3">Flats</label><br>
+              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+              <label for="vehicle3">Houses</label><br>
+              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+              <label for="vehicle3">Other</label><br>
+              <br>
+              <h3>Open House</h3>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+              <label for="vehicle1"> Today Only</label><br>
+              <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+              <label for="vehicle2">Tomorrow Only</label><br>
+              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+              <label for="vehicle3"> Till Week ends</label><br>
+              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+              <label for="vehicle3">Upcoming Weekend</label><br>
+              <br>
+              <h3>Price</h3>
+              <div class="row">
+                <div class="col-md-6">
+              <select name="cars" id="cars">
+                <option value="volvo">MIN</option>
+                <option value="saab">20,00,000</option>
+                <option value="saab">30,00,000</option>
+                <option value="saab">40,00,000</option>
+                <option value="saab">50,00,000</option>
+                <option value="mercedes">60,00,000</option>
+                <option value="audi">70,00,000</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <select name="cars" id="cars">
+                <option value="volvo">MAX</option>
+                <option value="saab">20,00,000</option>
+                <option value="saab">30,00,000</option>
+                <option value="saab">40,00,000</option>
+                <option value="saab">50,00,000</option>
+                <option value="mercedes">60,00,000</option>
+                <option value="audi">70,00,000</option>
+              </select>
+            </div>
+            </div>
+            <div>
+            <h3>Bedroom</h3>
+            <input type="number" id="myNumber">
+            <br>
+            <h3>Bathroom</h3>
+            <input type="number" id="myNumber">
+            <br>
+            <h3>Garage</h3>
+            <input type="number" id="myNumber">
+          </div>
+          <div class="slidecontainer">
+            <h3>SQFT</h3>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          </div>
+          <br>
+          <div class="tenure">
+          <h3>TENURE</h3>
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+          <label for="vehicle1">Free hold</label><br>
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+          <label for="vehicle2">Lease Hold</label><br>
+          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+          <label for="vehicle3">Share of freehold</label><br>
+        </div>
             </div>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-9">
             <div class="row">
               <div class="col-md-6">
                 <div class="card" style="width: 100%;">
                   <img src="images/property-image15-409x250.jpg" class="card-img-top" alt="..." />
                   <div class="card-body">
+                    <h2 class="num">$21,500 &nbsp <span class="guide">Guide Price</span></h2>
                     <h5 class="card-title">New Superior Quality House…</h5>
                     <p class="card-text">
-                      London, United Kingdom
+                      <i class="fas fa-map-marker-alt mr-2"></i>London, United Kingdom
                     </p>
                     <br>
                     <div class="row">
                       <div class="col-md-6 props">
-                        Property Notes
+                        <button class="buttonp"><i class="fas fa-book mr-2"></i>Property Notes</button>
                       </div>
                       <div class="col-md-6 hide">
-                        Hide property
+                        <button class="buttonp"><i class="fas fa-ban mr-2"></i>Hide Notes</button>
                       </div>
                     </div>
                   </div>
@@ -187,10 +260,104 @@
                 <div class="card" style="width: 100%;">
                   <img src="images/banner_3-409x250.jpg" class="card-img-top" alt="..." />
                   <div class="card-body">
-                    <h5 class="card-title">New Semi Detached House…</h5>
+                    <h2 class="num">$21,500 &nbsp <span class="guide">Guide Price</span></h2>
+                    <h5 class="card-title">New Superior Quality House…</h5>
                     <p class="card-text">
-                      London, United Kingdom
+                      <i class="fas fa-map-marker-alt mr-2"></i>London, United Kingdom
                     </p>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-6 props">
+                        <button class="buttonp"><i class="fas fa-book mr-2"></i>Property Notes</button>
+                      </div>
+                      <div class="col-md-6 hide">
+                        <button class="buttonp"><i class="fas fa-ban mr-2"></i>Hide Notes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card carty" style="width: 100%;">
+                  <img src="images/property-image05-409x250.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h2 class="num">$21,500 &nbsp <span class="guide">Guide Price</span></h2>
+                    <h5 class="card-title">New Superior Quality House…</h5>
+                    <p class="card-text">
+                      <i class="fas fa-map-marker-alt mr-2"></i>London, United Kingdom
+                    </p>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-6 props">
+                        <button class="buttonp"><i class="fas fa-book mr-2"></i>Property Notes</button>
+                      </div>
+                      <div class="col-md-6 hide">
+                        <button class="buttonp"><i class="fas fa-ban mr-2"></i>Hide Notes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card carty" style="width: 100%;">
+                  <img src="images/property-image03-409x250.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h2 class="num">$21,500 &nbsp <span class="guide">Guide Price</span></h2>
+                    <h5 class="card-title">New Superior Quality House…</h5>
+                    <p class="card-text">
+                      <i class="fas fa-map-marker-alt mr-2"></i>London, United Kingdom
+                    </p>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-6 props">
+                        <button class="buttonp"><i class="fas fa-book mr-2"></i>Property Notes</button>
+                      </div>
+                      <div class="col-md-6 hide">
+                        <button class="buttonp"><i class="fas fa-ban mr-2"></i>Hide Notes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card carty" style="width: 100%;">
+                  <img src="images/property-image12-409x250.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h2 class="num">$21,500 &nbsp <span class="guide">Guide Price</span></h2>
+                    <h5 class="card-title">New Superior Quality House…</h5>
+                    <p class="card-text">
+                      <i class="fas fa-map-marker-alt mr-2"></i>London, United Kingdom
+                    </p>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-6 props">
+                        <button class="buttonp"><i class="fas fa-book mr-2"></i>Property Notes</button>
+                      </div>
+                      <div class="col-md-6 hide">
+                        <button class="buttonp"><i class="fas fa-ban mr-2"></i>Hide Notes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>                
+              <div class="col-md-6">
+                <div class="card carty" style="width: 100%;">
+                  <img src="images/property-image06-409x250.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h2 class="num">$21,500 &nbsp <span class="guide">Guide Price</span></h2>
+                    <h5 class="card-title">New Superior Quality House…</h5>
+                    <p class="card-text">
+                      <i class="fas fa-map-marker-alt mr-2"></i>London, United Kingdom
+                    </p>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-6 props">
+                        <button class="buttonp"><i class="fas fa-book mr-2"></i>Property Notes</button>
+                      </div>
+                      <div class="col-md-6 hide">
+                        <button class="buttonp"><i class="fas fa-ban mr-2"></i>Hide Notes</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

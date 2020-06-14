@@ -1030,8 +1030,89 @@ ul {
 
 /*listings*/
 
-.propsort .card {
+.propsort {
   background-color: #f1f1f1;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.propsort h3 {
+  font-size: 12px;
+  font-family: "RALEWAY", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #777777;
+}
+
+.propsort .PropertyT {
+  background-color: #fff;
+}
+
+.propsort .card {
+  background-color: #eaeaea;
+  border: none;
+}
+
+.propsort .carty {
+  margin-top: 30px;
+}
+
+.propsort .card .num {
+  color: red !important;
+  font-size: 18px;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 600;
+}
+
+.propsort .card .guide {
+  color: red !important;
+  font-size: 12px;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.propsort .card p {
+  color: #9999a3 !important;
+}
+
+.propsort .buttonp {
+  display: block;
+  width: 100%;
+  border: 1px solid #777777;
+  background-color: #eaeaea !important;
+  padding: 14px 14px;
+  font-size: 14px;
+  color: #9999a3 !important;
+  cursor: pointer;
+  text-align: center;
+}
+
+.propsort .buttonp:hover {
+  background-color: #777777 !important;
+  color: #fff !important;
+}
+
+.propsort input[type="number"] {
+  margin: 10px 0;
+}
+
+.propsort .slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.propsort .slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 10px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
 }
 
 @media screen and (max-width: 768px) {
