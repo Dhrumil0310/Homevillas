@@ -742,7 +742,6 @@ th {
   font-size: 14px;
   font-family: "ROBOTO", sans-serif;
   font-weight: 600;
-  letter-spacing: 1.2px;
 }
 
 .mybutton1 .icons,
@@ -759,7 +758,6 @@ th {
   font-size: 14px;
   font-family: "ROBOTO", sans-serif;
   font-weight: 600;
-  letter-spacing: 1.2px;
 }
 
 /* Position the image container (needed to position the left and right arrows) */
@@ -1029,8 +1027,9 @@ ul {
   padding: 5px;
   border: 1px solid #e4e4e4;
 }
-.captchacont .g-recaptcha {
-  width: 100%;
+.g-recaptcha {
+  transform: scale(0.77);
+  transform-origin: 0 0;
 }
 .captchacont .conbutton {
   margin-top: 20px;
@@ -1190,5 +1189,20 @@ ul {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .properties {
+    text-align: center;
+  }
+
+  .properties .col-lg-3 {
+    padding: 20px 0;
+    width: 50rem;
+  }
+
+  .properties .card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
 }
