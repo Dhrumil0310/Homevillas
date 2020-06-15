@@ -77,7 +77,7 @@ html {
 
 .section1 {
   padding: 150px 0;
-  background: url("../images/section1.jpg") no-repeat;
+  background: url("../images/Watermarked-3-750x500.webp") no-repeat;
   background-size: 100% 100%;
 }
 
@@ -114,6 +114,27 @@ html {
 
 .features .col-md-4 {
   padding-top: 40px;
+}
+
+.features .feat {
+  font-family: "RALEWAY", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #5a2e8a !important;
+}
+
+.features .feat1 {
+  font-family: "ROBOTO", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: red !important;
+}
+
+.features .but2 {
+  padding: 5px 8px;
+  border: 2px solid #5a2e8a !important;
+  border-radius: 5px;
+  color: #5a2e8a !important;
 }
 
 .texts {
@@ -1082,8 +1103,8 @@ ul {
   width: 100%;
   border: 1px solid #777777;
   background-color: #eaeaea !important;
-  padding: 14px 14px;
-  font-size: 14px;
+  padding: 10px 10px;
+  font-size: 12px;
   color: #9999a3 !important;
   cursor: pointer;
   text-align: center;
@@ -1096,6 +1117,7 @@ ul {
 
 .propsort input[type="number"] {
   margin: 10px 0;
+  width: 100%;
 }
 
 .propsort .slidecontainer {
@@ -1136,6 +1158,10 @@ ul {
     text-align: left;
   }
 
+  .features .but2 {
+    display: none;
+  }
+
   .pagenotfound .container {
     width: 100%;
   }
@@ -1158,5 +1184,11 @@ ul {
 
   .info .cont {
     text-align: center;
+  }
+
+  .propsort .col-md-3 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
