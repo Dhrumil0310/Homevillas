@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Homevillas-Property</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -17,7 +17,6 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/aos.css" />
   </head>
   <body>
     <section class="topnav">
@@ -81,9 +80,6 @@
               <a class="dropdown-item" href="faq.html">FAQ</a>
               <a class="dropdown-item" href="pagenotfound.html">404 PAGE</a>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="blog.html">BLOG</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">CONTACT</a>
@@ -665,8 +661,6 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
-    <script src="./js/aos.js"></script>
-
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
       integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
@@ -688,17 +682,8 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./js/home.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/multi.js"></script>
+
     <script>
-      var preloader = document.getElementById("loading");
-
-      function myFunction() {
-        preloader.style.display = "none";
-      }
-
       var slideIndex = 1;
       showSlides(slideIndex);
 
@@ -733,8 +718,6 @@
         dots[slideIndex - 1].className += " active";
         captionText.innerHTML = dots[slideIndex - 1].alt;
       }
-
-      AOS.init({ duration: 2000 });
     </script>
   </body>
 </html>
