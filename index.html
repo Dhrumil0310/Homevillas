@@ -18,10 +18,11 @@
 			rel="shortcut icon"
 			href="images/favicon.jpg"
 			type="image/x-icon"
+			id="favicon"
 		/>
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
-	<body>
+	<body onload="getIndexData(); getTestimonialData(); getPageData();">
 		<section class="topnav">
 			<div class="container">
 				<div class="row">
@@ -133,9 +134,14 @@
 						</h5>
 						<br />
 						<br />
-						<p>We sell a property every 45 minutes</p>
-						<p>We abide by the strictest codes of practice</p>
-						<p>11,300 buyers registered each month</p>
+						<p id="index_top_p">
+							We sell a property every 45 minutes <br /><br />
+							We abide by the strictest codes of practice
+							<br /><br />
+							11,300 buyers registered each month <br /><br />
+						</p>
+						<!-- <p>We abide by the strictest codes of practice</p>
+						<p>11,300 buyers registered each month</p> -->
 					</div>
 				</div>
 			</div>
@@ -323,8 +329,8 @@
 							src="images/home-service1.png"
 							alt=""
 						/>
-						<h5>DESCRIBE YOUR TASK</h5>
-						<p>
+						<h5 id="index_task_h5_1">DESCRIBE YOUR TASK</h5>
+						<p id="index_task_p_1">
 							HomeVillas have theme search, user can manually draw
 							lines on map, all ads property listings in that area
 							show up as a result.
@@ -336,8 +342,8 @@
 							src="images/home-service2.png"
 							alt=""
 						/>
-						<h5>DESCRIBE YOUR TASK</h5>
-						<p>
+						<h5 id="index_task_h5_2">DESCRIBE YOUR TASK</h5>
+						<p id="index_task_p_2">
 							HomeVillas have theme search, user can manually draw
 							lines on map, all ads property listings in that area
 							show up as a result.
@@ -349,8 +355,8 @@
 							src="images/home-service3.png"
 							alt=""
 						/>
-						<h5>DESCRIBE YOUR TASK</h5>
-						<p>
+						<h5 id="index_task_h5_3">DESCRIBE YOUR TASK</h5>
+						<p id="index_task_p_3">
 							HomeVillas have theme search, user can manually draw
 							lines on map, all ads property listings in that area
 							show up as a result.
@@ -432,7 +438,7 @@
 							data-ride="carousel"
 						>
 							<!-- Carousel indicators -->
-							<ol class="carousel-indicators">
+							<ol class="carousel-indicators" id="test_indicator">
 								<li
 									data-target="#myCarousel"
 									data-slide-to="0"
@@ -448,7 +454,7 @@
 								></li>
 							</ol>
 							<!-- Wrapper for carousel items -->
-							<div class="carousel-inner">
+							<div class="carousel-inner" id="testimonial_target">
 								<div class="item carousel-item active">
 									<div class="img-box">
 										<img
@@ -537,7 +543,7 @@
 		<!--solve error not responsive-->
 		<section class="brands">
 			<div class="container text-center">
-				<div class="row">
+				<div class="row" id="partner_target">
 					<img src="images/partner03.png" alt="" />
 					<img src="images/partner05.png" alt="" />
 					<img src="images/partner04.png" alt="" />
@@ -566,31 +572,47 @@
 					</div>
 					<div class="col-md-6 text-right socially">
 						<div id="social">
-							<a class="facebookBtn smGlobalBtn" href="#"
+							<a
+								class="facebookBtn smGlobalBtn"
+								href="#"
+								id="fb_link"
 								><i class="fab fa-facebook-f"></i
 							></a>
-							<a class="twitterBtn smGlobalBtn" href="#"
+							<a
+								class="twitterBtn smGlobalBtn"
+								href="#"
+								id="twitter_link"
 								><i class="fab fa-twitter"></i
 							></a>
-							<a class="googleplusBtn smGlobalBtn" href="#"
+							<a
+								class="googleplusBtn smGlobalBtn"
+								href="#"
+								id="linked_link"
 								><i class="fab fa-linkedin-in"></i
 							></a>
-							<a class="linkedinBtn smGlobalBtn" href="#"
+							<a
+								class="linkedinBtn smGlobalBtn"
+								href="#"
+								id="insta_link"
 								><i class="fab fa-instagram"></i
 							></a>
 						</div>
 						<br />
 						<div class="mydiv">
-							<img
-								class="myimage"
-								src="images/app-image1.png"
-								alt=""
-							/>
-							<img
-								class="myimage"
-								src="images/app-image2.png"
-								alt=""
-							/>
+							<a href="" id="app_link">
+								<img
+									class="myimage"
+									src="images/app-image1.png"
+									alt=""
+								/>
+							</a>
+							<a href="" id="play_link">
+								<img
+									class="myimage"
+									src="images/app-image2.png"
+									alt=""
+								/>
+							</a>
 						</div>
 					</div>
 				</div>
