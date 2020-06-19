@@ -27,8 +27,12 @@ async function getPropertyData() {
     const res = await axios.get(`${url}property`);
     properties = res.data;
     property_target.innerHTML = "";
-    let img = "";
+    let max_value = 0;
     for (property of properties) {
+        let img = "";
+        if(property.price > max_value) {
+            max_value = property.price;
+        }
         if(property.images && property.images.length > 0) {
             img = `data:${property.images[0].contentType};base64,${property.images[0].file}`
         }
@@ -56,35 +60,101 @@ async function getPropertyData() {
             </div>
         `
     }
+    price_max.value = max_value;
 }
 
 function filterData() {
-    let filtered_properties = properties;
+    let filtered_properties = [];
     let feet_min = (parseInt(feet.value) - 1) * 1000;
     let feet_max = parseInt(feet.value) * 1000;
     if(feet_max == 10000) {
         feet_max = 999999;
     }
     let categories = [];
-    for(ele of category) {
-        if(ele.checked) {
-            categories.push(ele.value);
+    if(category[0].checked){
+        categories.push("All");
+    } else {
+        for(ele of category) {
+            if(ele.checked) {
+                categories.push(ele.value);
+            }
+        }
+    }
+    if(categories[0] == "All") {
+        for(property of properties) {
+            filtered_properties.push(property);
+        }
+    } else {
+        for(property of properties) {
+            for(ele of categories){
+                if(property.category == ele) {
+                    filtered_properties.push(property);
+                    break;
+                }
+            }
         }
     }
     if(feet.value > 0) {
         filtered_properties = filtered_properties.filter(prop => {
-            return (prop.feet > feet_min && prop.feet < feet_max)
+            return (prop.feet >= feet_min && prop.feet <= feet_max)
         })
     }
-    if(categories.length > 0) {
+    if(categories.length > 0 && categories[0]!="All") {
         filtered_properties = filtered_properties.filter(prop => {
             for (let category of categories) {
-                console.log(prop.category);
                 if(prop.category == category) return true;
             }
             return false;
         })
     }
-    console.log(price_min.value);
-    console.log(filtered_properties);
+    if(price_max.value != "" && price_min.value != "") {
+        filtered_properties = filtered_properties.filter(prop => {
+            return (prop.price <= price_max.value && prop.price >= price_min.value)
+        })
+    }
+    if(bedrooms.value != "") {
+        filtered_properties = filtered_properties.filter(prop => {
+            return prop.bedrooms == bedrooms.value;
+        })
+    }
+    if(bathrooms.value != "") {
+        filtered_properties = filtered_properties.filter(prop => {
+            return prop.bathrooms == bathrooms.value;
+        })
+    }
+    if(floors.value != "") {
+        filtered_properties = filtered_properties.filter(prop => {
+            return prop.floors == floors.value;
+        })
+    }
+    property_target.innerHTML = "";
+    for (property of filtered_properties) {
+        let img = "";
+        if(property.images && property.images.length > 0) {
+            img = `data:${property.images[0].contentType};base64,${property.images[0].file}`
+        }
+        property_target.innerHTML += `
+            <div class="col-md-6">
+                <div class="card" style="width: 100%;">
+                    <img src="${img}" alt="..." />
+                    <div class="card-body">
+                        <h2 class="num">Rs. ${property.price} &nbsp <span class="guide">Guide Price</span></h2>
+                        <h5 class="card-title">${property.title}</h5>
+                        <p class="card-text">
+                            <i class="fas fa-map-marker-alt mr-2"></i>${property.address}
+                        </p>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6 props">
+                            <button class="buttonp" onclick="window.location.href = 'propertydetails.html?id=${property._id}'"><i class="fas fa-book mr-2"></i>View Property</button>
+                            </div>
+                            <div class="col-md-6 hide">
+                            <button class="buttonp"><i class="fas fa-ban mr-2"></i>Unassigned</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+    }
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+	<head id="head_top">
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Homevillas-Property</title>
@@ -19,19 +19,23 @@
 			async
 			defer
 		></script>
-		<link
+		<!-- <link
 			rel="shortcut icon"
 			href="images/favicon.ico"
 			type="image/x-icon"
-		/>
+		/> -->
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
-	<body>
+	<body onload="getPageData(); getPropertyData();">
 		<section class="topnav">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8">
-						<img src="images/homevillas-logo.png" alt="" />
+						<img
+							src="images/homevillas-logo.png"
+							alt=""
+							id="header_logo"
+						/>
 					</div>
 					<div class="col-md-2 text-right" style="float: right;">
 						<p class="text-center">
@@ -128,18 +132,23 @@
 							<div class="row">
 								<div class="col-md-7">
 									<p>
-										<span class="num">$21,500</span> &nbsp
+										<span class="num" id="price"
+											>$21,500</span
+										>
+										&nbsp
 										<a class="anc" href="#">Guide price</a>
 									</p>
-									<h3>New Superior Quality House For Sale</h3>
-									<p>
+									<h3 id="title">
+										New Superior Quality House For Sale
+									</h3>
+									<p id="address">
 										<i
 											class="fas fa-map-marker-alt mr-2"
 										></i
 										>104 High Street, Harrow-on-the-Hill,
 										HA1 3LP
 									</p>
-									<p>
+									<p id="contact">
 										<i class="fas fa-phone-alt mr-2"></i
 										>0044 202 32391216
 									</p>
@@ -164,7 +173,7 @@
 						</div>
 						<div class="caro">
 							<!-- Container for the image gallery -->
-							<div class="cont">
+							<div class="cont" id="image_target">
 								<!-- Full-width images with number text -->
 								<div class="mySlides">
 									<div class="numbertext"></div>
@@ -273,7 +282,8 @@
 							<div class="key">
 								<h3>KEY DETAILS</h3>
 								<br />
-								<p class="open">
+								<div id="key_target"></div>
+								<!-- <p class="open">
 									Open Viewing Friday 7th October at 12noon
 								</p>
 								<p class="open">Home Report £260,000</p>
@@ -287,13 +297,13 @@
 								</p>
 								<p class="open">
 									City Centre Within Easy Reach
-								</p>
+                </p> -->
 							</div>
 							<br />
 							<div class="prop">
 								<h3>PROPERTY DESCRIPTION</h3>
 								<br />
-								<p>
+								<p id="description_target">
 									His two bedroom second floor apartment forms
 									part of a refurbished modern development and
 									is completed to the highest standards. The
@@ -308,7 +318,7 @@
 									reduced price.
 								</p>
 							</div>
-							<br />
+							<!-- <br />
 							<div class="kitchen">
 								<p>Lounge/Kitchen/Dining</p>
 								<p>6.81m (22’4″) x 4.11m (13’5″)</p>
@@ -318,7 +328,7 @@
 								<p>4.75m (15’7″) x 3.45m (11’3″)</p>
 								<p>Bathroom</p>
 								<p>2.59m (8’5″) x 2.08m (6’9″)</p>
-							</div>
+							</div> -->
 						</div>
 						<div class="amenities">
 							<div class="container">
@@ -754,7 +764,7 @@
 
 		<section class="brands">
 			<div class="container text-center">
-				<div class="row">
+				<div class="row" id="partner_target">
 					<img src="images/partner03.png" alt="" />
 					<img src="images/partner05.png" alt="" />
 					<img src="images/partner04.png" alt="" />
@@ -783,31 +793,45 @@
 					</div>
 					<div class="col-md-6 text-right socially">
 						<div id="social">
-							<a class="facebookBtn smGlobalBtn" href="#"
+							<a
+								class="facebookBtn smGlobalBtn"
+								href="#"
+								id="fb_link"
 								><i class="fab fa-facebook-f"></i
 							></a>
-							<a class="twitterBtn smGlobalBtn" href="#"
+							<a
+								class="twitterBtn smGlobalBtn"
+								href="#"
+								id="twitter_link"
 								><i class="fab fa-twitter"></i
 							></a>
-							<a class="googleplusBtn smGlobalBtn" href="#"
+							<a
+								class="googleplusBtn smGlobalBtn"
+								href="#"
+								id="linked_link"
 								><i class="fab fa-linkedin-in"></i
 							></a>
-							<a class="linkedinBtn smGlobalBtn" href="#"
+							<a
+								class="linkedinBtn smGlobalBtn"
+								href="#"
+								id="insta_link"
 								><i class="fab fa-instagram"></i
 							></a>
 						</div>
 						<br />
 						<div class="mydiv">
-							<img
-								class="myimage"
-								src="images/app-image1.png"
-								alt=""
-							/>
-							<img
-								class="myimage"
-								src="images/app-image2.png"
-								alt=""
-							/>
+							<a href="" id="app_link"
+								><img
+									class="myimage"
+									src="images/app-image1.png"
+									alt=""
+							/></a>
+							<a href="" id="play_link">
+								<img
+									class="myimage"
+									src="images/app-image2.png"
+									alt=""
+							/></a>
 						</div>
 					</div>
 				</div>
@@ -877,5 +901,8 @@
 				captionText.innerHTML = dots[slideIndex - 1].alt;
 			}
 		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+		<script src="./js/multi.js"></script>
+		<script src="./js/property.js"></script>
 	</body>
 </html>
