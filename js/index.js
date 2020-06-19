@@ -88,3 +88,38 @@ async function getTestimonialData() {
         }
     }
 }
+
+async function getPropertyData() {
+    const res = await axios.get(`${url}property/6`);
+    const data = res.data;
+    const property_target = document.getElementById("property_target");
+    property_target.innerHTML = "";
+    for(property of data) {
+        let img = "";
+        if(property.images && property.images.length > 0) {
+            img = `data:${property.images[0].contentType};base64,${property.images[0].file}`;
+        }
+        property_target.innerHTML += `
+            <div class="col-md-4">
+                <div class="card" style="width: 100%;">
+                    <img
+                        class="card-img-top"
+                        src="${img}"
+                        alt="Card image cap"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Rs. ${property.price} &nbsp Guide price
+                        </h5>
+                        <p class="card-text">
+                            ${property.title}
+                        </p>
+                        <p>${property.address}</p>
+                        <p>Bedrooms: ${property.bedrooms} &nbsp; Bathrooms: ${property.bathrooms}</p>
+                        <p>Floors: ${property.floors}  &nbsp; SqFt: ${property.feet}</p>
+                    </div>
+                </div>
+            </div>
+        `
+    }
+}

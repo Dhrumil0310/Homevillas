@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+	<head id="head_top">
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Homevillas</title>
@@ -16,13 +16,14 @@
 		/>
 		<link
 			rel="shortcut icon"
-			href="images/favicon.jpg"
+			href="images/favicon.ico"
 			type="image/x-icon"
-			id="favicon"
 		/>
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
-	<body onload="getIndexData(); getTestimonialData(); getPageData();">
+	<body
+		onload="getPageData(); getIndexData(); getPropertyData(); getTestimonialData(); "
+	>
 		<section class="topnav">
 			<div class="container">
 				<div class="row">
@@ -152,11 +153,13 @@
 				<h5 class="feat">Featured Properties</h5>
 				<p class="feat1">
 					FEATURED FOR SALE &nbsp FEATURED TO RENT
-					<button class="but2" style="float: right;">
-						Show More Property
-					</button>
+					<a href="listing.html">
+						<button class="but2" style="float: right;">
+							Show More Property
+						</button></a
+					>
 				</p>
-				<div class="row">
+				<div class="row" id="property_target">
 					<div class="col-md-4">
 						<div class="card" style="width: 100%;">
 							<img
