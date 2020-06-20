@@ -11,7 +11,6 @@ const play_link = document.getElementById("play_link");
 const app_link = document.getElementById("app_link");
 
 async function getPageData() {
-    console.log("hello");
     const res = await axios.get(`${url}multi_data`);
     const data = res.data[0];
     fb_link.href = data.fb_link;
