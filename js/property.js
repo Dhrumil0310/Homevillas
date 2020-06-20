@@ -13,10 +13,18 @@ const plan_img = document.getElementById("plan_img");
 const similar_target = document.getElementById("similar_target");
 let data;
 
+// const form =  document.getElementById("contact_form");
 const params = new URLSearchParams(window.location.search);
 
 var slideIndex = 1;
 
+// window.addEventListener("scroll", () => {
+//     if(window.pageYOffset > 3200) {
+//         form.style.display = "none";
+//     } else {
+//         form.style.display = "";
+//     }
+// })
 
 async function getPropertyData() {
     let res = await axios.get(`${url}property`, {
@@ -109,7 +117,7 @@ async function getPropertyData() {
         doc2.download = "New Document 2";
     }
     count = 0;
-    plan_num.innerHTML = "Plans: "
+    plan_num.innerHTML = "Plans: &nbsp;"
     if(data.plans && data.plans.length > 0) {
         for (image of data.plans) {
             count++;
@@ -142,7 +150,7 @@ async function getPropertyData() {
                     />
                     <div class="card-body">
                         <h5 class="card-title">${sim_price}</h5>
-                        <h5 id="card-text">
+                        <h5 id="card-text" onclick="window.location.href='propertydetails.html?id=${prop._id}'" style="cursor: pointer">
                             ${prop.title}
                         </h5>
                         <p><i class="fas fa-bed mr-2"></i>Bedrooms: ${prop.bedrooms}</p>
