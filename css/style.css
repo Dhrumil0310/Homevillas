@@ -919,6 +919,13 @@ th {
 	color: #777777 !important;
 }
 
+#key_target {
+	font-family: 'ROBOTO', sans-serif;
+	font-weight: 400;
+	color: #777777 !important;
+	line-height: 1.6rem;
+}
+
 .keymain .open {
 	line-height: 8px;
 }

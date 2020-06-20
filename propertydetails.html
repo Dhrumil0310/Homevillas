@@ -282,7 +282,7 @@
 							<div class="key">
 								<h3>KEY DETAILS</h3>
 								<br />
-								<div id="key_target"></div>
+								<p id="key_target"></p>
 								<!-- <p class="open">
 									Open Viewing Friday 7th October at 12noon
 								</p>
@@ -537,17 +537,18 @@
 						<div class="floor">
 							<div class="container">
 								<h3>FLOOR PLANS</h3>
-								<p>
+								<!-- <p>
 									First Floor Second Floor Ground Floor
 									Basement
-								</p>
+								</p> -->
+								<p id="plan_num"></p>
 								<br />
-								<h3 class="text-center">FIRST FLOOR</h3>
 								<div class="text-center">
 									<img
 										src="images/first-floor.jpg"
 										alt=""
 										class="myimage"
+										id="plan_img"
 									/>
 								</div>
 							</div>
@@ -674,10 +675,10 @@
 		</section>
 
 		<section class="properties">
-			<h3 class="container">PROPERTIES ON THE MARKET NEARBY</h3>
+			<h3 class="container">SIMILAR PROPERTIES</h3>
 			<br />
 			<div class="container">
-				<div class="row">
+				<div class="row" id="similar_target">
 					<div class="col-lg-3">
 						<div class="card" style="width: 15rem;">
 							<img
@@ -843,13 +844,11 @@
 		</section>
 
 		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
 			integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
 			crossorigin="anonymous"
 		></script>
-
 		<script
 			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -865,7 +864,6 @@
 			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 			crossorigin="anonymous"
 		></script>
-
 		<script>
 			// var slideIndex = 1;
 			// showSlides(slideIndex);
