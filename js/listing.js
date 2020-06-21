@@ -38,7 +38,7 @@ async function getPropertyData() {
         }
         property_target.innerHTML += `
             <div class="col-md-6">
-                <div class="card" style="width: 100%;">
+                <div class="card carty" style="width: 100%;">
                     <img src="${img}" alt="..." />
                     <div class="card-body">
                         <h2 class="num">Rs. ${property.price} &nbsp <span class="guide">Guide Price</span></h2>

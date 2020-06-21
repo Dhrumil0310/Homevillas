@@ -1019,6 +1019,8 @@ ul {
 }
 
 .mycont .captchacont {
+	/* position: fixed; */
+	/* right: 10px; */
 	margin: 40px 0px;
 	background-color: #fff;
 	padding: 30px 10px;
@@ -1106,7 +1108,7 @@ ul {
 }
 
 .propsort .carty {
-	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 .propsort .card .num {

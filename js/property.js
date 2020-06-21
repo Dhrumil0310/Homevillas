@@ -13,18 +13,21 @@ const plan_img = document.getElementById("plan_img");
 const similar_target = document.getElementById("similar_target");
 let data;
 
-// const form =  document.getElementById("contact_form");
+const form =  document.getElementById("contact_form");
 const params = new URLSearchParams(window.location.search);
 
 var slideIndex = 1;
 
-// window.addEventListener("scroll", () => {
-//     if(window.pageYOffset > 3200) {
-//         form.style.display = "none";
-//     } else {
-//         form.style.display = "";
-//     }
-// })
+window.addEventListener("scroll", () => {
+    // if(window.pageYOffset > 100) {
+    //     form.style.margin = "0px";
+    // }
+    if(window.pageYOffset > 2500) {
+        form.style.display = "none";
+    } else {
+        form.style.display = "";
+    }
+})
 
 async function getPropertyData() {
     let res = await axios.get(`${url}property`, {

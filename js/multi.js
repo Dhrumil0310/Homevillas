@@ -35,3 +35,101 @@ async function getPageData() {
     }
 }
 
+async function getFaqData() {
+    const res = await axios.get(`${url}faq_data`);
+    const data = res.data[0];
+    const gen_target = document.getElementById("general_target");
+    const tech_target = document.getElementById("technical_target");
+    const admin_target = document.getElementById("admin_target");
+    const pricing_target = document.getElementById("pricing_target");
+    let general = [], technical = [], pricing = [], admin = []; 
+    for (let i = 0; i < data.type.length; i++) {
+        if(data.type[i] == "General") {
+            general.push(i);
+        }
+         if(data.type[i] == "Admin") {
+            admin.push(i);
+        }
+         if(data.type[i] == "Technical") {
+            technical.push(i);
+        }
+         if(data.type[i] == "Pricing") {
+            pricing.push(i);
+        }
+    }
+    if(general.length > 0) {
+        gen_target.innerHTML = "<h3>General Questions</h3><br />";
+        for(index of general) {
+            gen_target.innerHTML += `
+                <button class="accordion">
+					${data.faq_q[index]}
+				</button>
+				<div class="panel">
+					<p>
+						${data.faq_ans[index]}
+					</p>
+				</div>
+            `;
+        }
+    }
+    if(pricing.length > 0) {
+        pricing_target.innerHTML = "<h3>Pricing Questions</h3><br />";
+        for(index of pricing) {
+            pricing_target.innerHTML += `
+                <button class="accordion">
+					${data.faq_q[index]}
+				</button>
+				<div class="panel">
+					<p>
+						${data.faq_ans[index]}
+					</p>
+				</div>
+            `;
+        }
+    }
+    if(admin.length > 0) {
+        admin_target.innerHTML = "<h3>Admin Management</h3><br />";
+        for(index of admin) {
+            admin_target.innerHTML += `
+                <button class="accordion">
+					${data.faq_q[index]}
+				</button>
+				<div class="panel">
+					<p>
+						${data.faq_ans[index]}
+					</p>
+				</div>
+            `;
+        }
+    }
+    if(technical.length > 0) {
+        tech_target.innerHTML = "<h3>Technical Questions</h3><br />";
+        for(index of technical) {
+            tech_target.innerHTML += `
+                <button class="accordion">
+					${data.faq_q[index]}
+				</button>
+				<div class="panel">
+					<p>
+						${data.faq_ans[index]}
+					</p>
+				</div>
+            `;
+        }
+    }
+    var acc = document.getElementsByClassName('accordion');
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener('click', function () {
+            this.classList.toggle('active');
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+            }
+        });
+    }
+}
+
