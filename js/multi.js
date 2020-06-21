@@ -10,6 +10,12 @@ const twitter_link = document.getElementById("twitter_link");
 const play_link = document.getElementById("play_link");
 const app_link = document.getElementById("app_link");
 
+// async function onSubmit(token) {
+//     // const res = document.getElementById('demo-form').submit();
+//     const res = await axios.post(`${url}captcha`, { token: token });
+    
+// }
+
 async function getPageData() {
     const res = await axios.get(`${url}multi_data`);
     const data = res.data[0];

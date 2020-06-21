@@ -123,3 +123,12 @@ async function getPropertyData() {
         `
     }
 }
+
+async function contactSend(evt) {
+    evt.preventDefault();
+    const form = document.getElementById("contact-form");
+    const form_data = new FormData(form);
+    const res = await axios.post(`${url}mail/contact`, form_data);
+    const mail_msg = document.getElementById("mail_msg");
+    mail_msg.innerHTML = res.data.title;
+}

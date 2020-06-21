@@ -11,6 +11,10 @@ const doc2 = document.getElementById("doc2");
 const plan_num = document.getElementById("plan_num");
 const plan_img = document.getElementById("plan_img");
 const similar_target = document.getElementById("similar_target");
+const realtor_name = document.getElementById("realtor_name");
+const realtor_email = document.getElementById("realtor_email");
+const realtor_contact = document.getElementById("realtor_contact");
+
 let data;
 
 const form = document.getElementById("contact_form");
@@ -31,6 +35,17 @@ var slideIndex = 1;
 var x = window.matchMedia("(min-width:1024px)");
 thisFunction(x);
 x.addListener(thisFunction);
+
+async function contactSend(token) {
+  const res = await axios.post(`${url}captcha`, {token: token});
+  if(res.data.title == "success") {
+    const new_form = document.getElementById("realtor_form");
+    const form_data = new FormData(new_form);
+    form_data.append("realtor", data.realtor);
+    form_data.append("realtor_mail", data.email);
+    const res = await axios.post(`${url}mail/contact`, form_data);
+  }
+}
 
 function thisFunction(x) {
   if (x.matches) {
@@ -162,6 +177,15 @@ async function getPropertyData() {
     plan_img.src = `data:${data.plans[0].contentType};base64,${data.plans[0].file}`;
   } else {
     plan_num.innerHTML += "None";
+  }
+  if(data.realtor) {
+    realtor_name.innerHTML = data.realtor;
+  }
+  if(data.email) {
+    realtor_email.innerHTML = data.email;
+  }
+  if(data.contact) {
+    realtor_contact.innerHTML = data.contact;
   }
 
   let similar = res.data;

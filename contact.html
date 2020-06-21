@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head id="head_top">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact-Homevillas</title>
@@ -14,17 +14,17 @@
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Karla:wght@700&family=Raleway:wght@600&family=Roboto:wght@400&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" /> -->
     <link rel="stylesheet" href="./css/style.css" />
 
   </head>
-  <body>
+  <body onload="getPageData(); getTestimonialData();">
 
     <section class="topnav">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
-            <img src="images/homevillas-logo.png" alt="" />
+            <img src="images/homevillas-logo.png" alt="" id="header_logo" />
           </div>
           <div class="col-md-2 text-right" style="float: right;">
             <p class="text-center">
@@ -183,11 +183,8 @@
       <div class="container ">
         <div class="text-center">
         <p class="quick">Quick Inquiry</p>
-        <p class="des">
-          Easy to use yet one of the most powerful admin panel of the
-          marketplace.
-          <br />
-          Theme Options, drag & drop Page builder and much more...
+        <p class="des" id="mail_msg">
+          Feel free to reach out to us for any support
         </p>
       </div>
         <div class="container">
@@ -228,7 +225,7 @@
             <h2>Testimonials</h2>
             <h5>WE HAVE THE RIGHT PROPERTIES NEEDS.</h5>
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
+              <ol class="carousel-indicators" id="test_indicator">
                 <li
                   data-target="#myCarousel"
                   data-slide-to="0"
@@ -237,7 +234,7 @@
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
               </ol>
-              <div class="carousel-inner">
+              <div class="carousel-inner" id="testimonial_target">
                 <div class="item carousel-item active">
                   <div class="img-box">
                     <img src="images/testimonial-thumbnail3.jpg" alt="" />
@@ -299,7 +296,7 @@
     </section>
 
     <section class="brands">
-      <div class="container text-center">
+      <div class="container text-center" id="partner_target">
         <div class="row">
           <img src="images/partner03.png" alt="" />
           <img src="images/partner05.png" alt="" />
@@ -329,23 +326,23 @@
           </div>
           <div class="col-md-6 text-right socially">
             <div id="social">
-              <a class="facebookBtn smGlobalBtn" href="#"
+              <a class="facebookBtn smGlobalBtn" href="#" id="fb_link"
                 ><i class="fab fa-facebook-f"></i
               ></a>
-              <a class="twitterBtn smGlobalBtn" href="#"
+              <a class="twitterBtn smGlobalBtn" href="#" id="twitter_link"
                 ><i class="fab fa-twitter"></i
               ></a>
-              <a class="googleplusBtn smGlobalBtn" href="#"
+              <a class="googleplusBtn smGlobalBtn" href="#" id="linked_link"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
-              <a class="linkedinBtn smGlobalBtn" href="#"
+              <a class="linkedinBtn smGlobalBtn" href="#" id="insta_link"
                 ><i class="fab fa-instagram"></i
               ></a>
             </div>
             <br />
             <div class="mydiv">
-              <img class="myimage" src="images/app-image1.png" alt="" />
-              <img class="myimage" src="images/app-image2.png" alt="" />
+              <a href="" id="app_link"><img class="myimage" src="images/app-image1.png" alt="" /></a>
+              <a href="" id="play_link"><img class="myimage" src="images/app-image2.png" alt="" /></a>
             </div>
           </div>
         </div>
@@ -410,6 +407,8 @@
       }
 
     </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="./js/multi.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
