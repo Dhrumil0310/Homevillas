@@ -35,16 +35,13 @@ x.addListener(thisFunction);
 function thisFunction(x) {
   if (x.matches) {
     window.addEventListener("scroll", () => {
-      // console.log(window.pageYOffset);
-      console.log(window.outerHeight);
-      console.log(document.body.clientHeight);
-      let height = 0;
-      if(document.body.clientHeight < window.outerHeight*3) {
-        height = document.body.clientHeight - window.outerHeight*1.1;
-      } else {
-        height = document.body.clientHeight - window.outerHeight*1.7;
-      }
-      if (window.pageYOffset > height) {
+      let height = document.body.children[3].clientHeight + document.body.children[4].clientHeight + document.body.children[5].clientHeight;
+      // if(document.body.clientHeight < window.outerHeight*3) {
+      //   height = document.body.clientHeight - window.outerHeight*1.1;
+      // } else {
+      //   height = document.body.clientHeight - window.outerHeight*1.7;
+      // }
+      if (window.pageYOffset > document.body.clientHeight - height*1.75) {
         form.style.display = "none";
       } else {
         form.style.display = "";
