@@ -116,6 +116,10 @@ html {
   padding-top: 40px;
 }
 
+.features .icons {
+  color: #777777;
+}
+
 .features .feat {
   font-family: "RALEWAY", sans-serif;
   font-size: 20px;
@@ -135,6 +139,30 @@ html {
   border: 2px solid #5a2e8a !important;
   border-radius: 5px;
   color: #5a2e8a !important;
+}
+
+.but2:hover {
+  color: white !important;
+  background: #5a2e8a;
+}
+
+.but3-container {
+  text-align: center;
+  padding: 0 0 15px 0;
+}
+
+.but3 {
+  padding: 5px 8px;
+  border: 2px solid #5a2e8a !important;
+  border-radius: 5px;
+  color: #5a2e8a !important;
+  text-align: center;
+  background: white;
+}
+
+.but3:hover {
+  color: white !important;
+  background: #5a2e8a;
 }
 
 .texts {
@@ -448,7 +476,7 @@ textarea {
 /*ABOUT*/
 
 .whoweare {
-  padding: 70px 0;
+  padding: 80px 0;
 }
 
 .whoweare .who {
@@ -475,7 +503,7 @@ textarea {
 }
 
 .Homevillas {
-  padding-bottom: 50px;
+  padding: 80px 0;
 }
 
 .Homevillas .home {
@@ -895,6 +923,13 @@ th {
   color: #777777 !important;
 }
 
+#key_target {
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 400;
+  color: #777777 !important;
+  line-height: 1.6rem;
+}
+
 .keymain .open {
   line-height: 8px;
 }
@@ -988,11 +1023,12 @@ ul {
 }
 
 .mycont .captchacont {
-  margin: 40px 0px;
+  margin: 0px 0px;
   background-color: #fff;
   padding: 30px 10px;
   background-color: #fff;
-  height: 100%;
+  right: 20px;
+  position: fixed;
 }
 
 .properties {
@@ -1032,7 +1068,7 @@ ul {
   transform-origin: 0 0;
 }
 .captchacont .conbutton {
-  margin-top: 20px;
+  margin-top: 0px;
   width: 100%;
   border: none;
   background-color: #d64521 !important;
@@ -1075,7 +1111,7 @@ ul {
 }
 
 .propsort .carty {
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .propsort .card .num {

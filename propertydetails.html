@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head id="head_top">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Property-Homevillas</title>
+    <title>Homevillas-Property</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -15,15 +15,19 @@
       rel="stylesheet"
     />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- <link
+			rel="shortcut icon"
+			href="images/favicon.ico"
+			type="image/x-icon"
+		/> -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
+  <body onload="getPageData(); getPropertyData();">
     <section class="topnav">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
-            <img src="images/homevillas-logo.png" alt="" />
+            <img src="images/homevillas-logo.png" alt="" id="header_logo" />
           </div>
           <div class="col-md-2 text-right" style="float: right;">
             <p class="text-center">
@@ -56,7 +60,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="container navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="home.html">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="listing.html">LISTINGS</a>
@@ -110,35 +114,47 @@
               <div class="row">
                 <div class="col-md-7">
                   <p>
-                    <span class="num">$21,500</span> &nbsp
+                    <span class="num" id="price">$21,500</span>
+                    &nbsp
                     <a class="anc" href="#">Guide price</a>
                   </p>
-                  <h3>New Superior Quality House For Sale</h3>
-                  <p>
+                  <h3 id="title">
+                    New Superior Quality House For Sale
+                  </h3>
+                  <p id="address">
                     <i class="fas fa-map-marker-alt mr-2"></i>104 High Street,
                     Harrow-on-the-Hill, HA1 3LP
                   </p>
-                  <p><i class="fas fa-phone-alt mr-2"></i>0044 202 32391216</p>
+                  <p id="contact">
+                    <i class="fas fa-phone-alt mr-2"></i>0044 202 32391216
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <!-- <button class="mybutton2">
+										<i class="far fa-list-alt icons"></i>
+										<br />Enquiry<br />
+										now
+									</button> -->
                 </div>
                 <div class="col-md-2">
                   <button class="mybutton1">
                     <i class="far fa-list-alt icons"></i>
-                    <br />Enquiry<br />
+                    <br />Enquire<br />
                     now
                   </button>
-                </div>
-                <div class="col-md-2">
-                  <button class="mybutton2">
-                    <i class="far fa-calendar-check icons"></i>
-                    <br />Request <br />
-                    viewing
-                  </button>
+                  <!-- <button class="mybutton2">
+										<i
+											class="far fa-calendar-check icons"
+										></i>
+										<br />Request <br />
+										viewing
+									</button> -->
                 </div>
               </div>
             </div>
             <div class="caro">
               <!-- Container for the image gallery -->
-              <div class="cont">
+              <div class="cont" id="image_target">
                 <!-- Full-width images with number text -->
                 <div class="mySlides">
                   <div class="numbertext"></div>
@@ -185,9 +201,9 @@
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
                 <!-- Image text 
-                <div class="caption-container">
-                  <p id="caption"></p>
-                </div>-->
+									<div class="caption-container">
+									<p id="caption"></p>
+									</div>-->
 
                 <!-- Thumbnail images -->
                 <div class="row container">
@@ -243,19 +259,28 @@
               <div class="key">
                 <h3>KEY DETAILS</h3>
                 <br />
-                <p class="open">Open Viewing Friday 7th October at 12noon</p>
-                <p class="open">Home Report £260,000</p>
-                <p class="open">Over £60,000 Discount To hr Value</p>
-                <p class="open">High Quality Accommodation</p>
-                <p class="open">Prime Location</p>
-                <p class="open">Attractive Landscaped Gardens</p>
-                <p class="open">City Centre Within Easy Reach</p>
+                <p id="key_target"></p>
+                <!-- <p class="open">
+									Open Viewing Friday 7th October at 12noon
+								</p>
+								<p class="open">Home Report £260,000</p>
+								<p class="open">
+									Over £60,000 Discount To hr Value
+								</p>
+								<p class="open">High Quality Accommodation</p>
+								<p class="open">Prime Location</p>
+								<p class="open">
+									Attractive Landscaped Gardens
+								</p>
+								<p class="open">
+									City Centre Within Easy Reach
+                </p> -->
               </div>
               <br />
               <div class="prop">
                 <h3>PROPERTY DESCRIPTION</h3>
                 <br />
-                <p>
+                <p id="description_target">
                   His two bedroom second floor apartment forms part of a
                   refurbished modern development and is completed to the highest
                   standards. The accommodation comprises of two double bedrooms,
@@ -267,23 +292,23 @@
                   greatly reduced price.
                 </p>
               </div>
-              <br />
-              <div class="kitchen">
-                <p>Lounge/Kitchen/Dining</p>
-                <p>6.81m (22’4″) x 4.11m (13’5″)</p>
-                <p>Bedroom One</p>
-                <p>5.28m (17’3″) x 3.26m (10’8″)</p>
-                <p>Bedroom Two</p>
-                <p>4.75m (15’7″) x 3.45m (11’3″)</p>
-                <p>Bathroom</p>
-                <p>2.59m (8’5″) x 2.08m (6’9″)</p>
-              </div>
+              <!-- <br />
+							<div class="kitchen">
+								<p>Lounge/Kitchen/Dining</p>
+								<p>6.81m (22’4″) x 4.11m (13’5″)</p>
+								<p>Bedroom One</p>
+								<p>5.28m (17’3″) x 3.26m (10’8″)</p>
+								<p>Bedroom Two</p>
+								<p>4.75m (15’7″) x 3.45m (11’3″)</p>
+								<p>Bathroom</p>
+								<p>2.59m (8’5″) x 2.08m (6’9″)</p>
+							</div> -->
             </div>
             <div class="amenities">
               <div class="container">
                 <h3>AMENITIES</h3>
                 <br />
-                <div class="row">
+                <div class="row" id="amenities_target">
                   <div class="col-md-4">
                     <p>
                       <i class="fas fa-map-marker-alt mr-3"></i>Parking/Garage
@@ -413,11 +438,11 @@
                 <div class="row">
                   <div class="col-md-6" style="display: inline-block;">
                     <img src="images/Property Paper.png" alt="" />
-                    <a href="#">Download papers</a>
+                    <a href="#" id="doc1">Download papers</a>
                   </div>
                   <div class="col-md-6">
                     <img src="images/Poperty Documents.png" alt="" />
-                    <a href="#">Download Papers</a>
+                    <a href="#" id="doc2">Download Papers</a>
                   </div>
                 </div>
               </div>
@@ -426,19 +451,23 @@
             <div class="floor">
               <div class="container">
                 <h3>FLOOR PLANS</h3>
-                <p>First Floor Second Floor Ground Floor Basement</p>
+                <!-- <p>
+									First Floor Second Floor Ground Floor
+									Basement
+								</p> -->
                 <br />
-                <h3 class="text-center">FIRST FLOOR</h3>
+                <p id="plan_num"></p>
                 <div class="text-center">
-                  <img src="images/first-floor.jpg" alt="" class="myimage" />
+                  <img src="" alt="" class="myimage" id="plan_img" />
                 </div>
               </div>
             </div>
-            <div class="freq">
-              <div class="conatiner">
-                <h3>FREQUENTLY ASK QUESTIONS?</h3>
-              </div>
-            </div>
+            <!-- <div class="freq">
+							<div class="conatiner">
+								<h3>FREQUENTLY ASK QUESTIONS?</h3>
+							</div>
+						</div> -->
+            <br />
             <div class="envi">
               <h3>ENVIRONMENTAL RESPONSIBILITY</h3>
               <br />
@@ -488,7 +517,9 @@
                   </div>
                   <div class="col-md-7">
                     <h4>Bostan Homes</h4>
-                    <p>84 St. Johns Wood High Street, St Johns Wood</p>
+                    <p>
+                      84 St. Johns Wood High Street, St Johns Wood
+                    </p>
                     <p>020 2946 XXXX</p>
                   </div>
                   <div class="col-md-3">
@@ -500,7 +531,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-12 captchacont">
+          <div class="col-lg-4 col-md-12 captchacont" id="contact_form">
             <div class="container">
               <div>
                 <div class="row">
@@ -509,7 +540,9 @@
                   </div>
                   <div class="col-md-8">
                     <h3>Boston Homes</h3>
-                    <p>84 St. Johns Wood High Street, St Johns Wood</p>
+                    <p>
+                      84 St. Johns Wood High Street, St Johns Wood
+                    </p>
                     <p>020 2946 XXXX</p>
                   </div>
                 </div>
@@ -518,8 +551,9 @@
                 <textarea
                   id="message"
                   placeholder="Text Here"
-                  style="height: 140px;"
+                  style="height: 50px;"
                 ></textarea>
+                <div class="g-recaptcha" data-sitekey="your_site_key"></div>
                 <button class="conbutton">Contact Agent</button>
               </div>
             </div>
@@ -529,10 +563,10 @@
     </section>
 
     <section class="properties">
-      <h3 class="container">PROPERTIES ON THE MARKET NEARBY</h3>
+      <h3 class="container">SIMILAR PROPERTIES</h3>
       <br />
       <div class="container">
-        <div class="row">
+        <div class="row" id="similar_target">
           <div class="col-lg-3">
             <div class="card" style="width: 15rem;">
               <img
@@ -611,7 +645,7 @@
 
     <section class="brands">
       <div class="container text-center">
-        <div class="row">
+        <div class="row" id="partner_target">
           <img src="images/partner03.png" alt="" />
           <img src="images/partner05.png" alt="" />
           <img src="images/partner04.png" alt="" />
@@ -630,32 +664,36 @@
         <div class="row">
           <div class="col-md-6">
             <p>
-              <a href="#">Home</a> &nbsp <a href="faq.html">FAQS</a> &nbsp
-              <a href="about.html">About Us</a> &nbsp
-              <a href="contact.html">Contact US</a>
+              Home &nbsp Members &nbsp FAQS &nbsp Blog &nbsp Contact US
             </p>
             <br />
-            <p>© 2020 REALESTATE. ALL RIGHTS RESERVED. CHIMPSTUDIO</p>
+            <p>
+              © 2020 REALESTATE. ALL RIGHTS RESERVED. CHIMPSTUDIO
+            </p>
           </div>
           <div class="col-md-6 text-right socially">
             <div id="social">
-              <a class="facebookBtn smGlobalBtn" href="#"
+              <a class="facebookBtn smGlobalBtn" href="#" id="fb_link"
                 ><i class="fab fa-facebook-f"></i
               ></a>
-              <a class="twitterBtn smGlobalBtn" href="#"
+              <a class="twitterBtn smGlobalBtn" href="#" id="twitter_link"
                 ><i class="fab fa-twitter"></i
               ></a>
-              <a class="googleplusBtn smGlobalBtn" href="#"
+              <a class="googleplusBtn smGlobalBtn" href="#" id="linked_link"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
-              <a class="linkedinBtn smGlobalBtn" href="#"
+              <a class="linkedinBtn smGlobalBtn" href="#" id="insta_link"
                 ><i class="fab fa-instagram"></i
               ></a>
             </div>
             <br />
             <div class="mydiv">
-              <img class="myimage" src="images/app-image1.png" alt="" />
-              <img class="myimage" src="images/app-image2.png" alt="" />
+              <a href="" id="app_link"
+                ><img class="myimage" src="images/app-image1.png" alt=""
+              /></a>
+              <a href="" id="play_link">
+                <img class="myimage" src="images/app-image2.png" alt=""
+              /></a>
             </div>
           </div>
         </div>
@@ -663,13 +701,11 @@
     </section>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
       integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
       crossorigin="anonymous"
     ></script>
-
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -685,14 +721,14 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-
     <script>
       var slideIndex = 1;
       showSlides(slideIndex);
 
       // Next/previous controls
       function plusSlides(n) {
-        showSlides((slideIndex += n));
+        slideIndex += n;
+        showSlides(slideIndex);
       }
 
       // Thumbnail image controls
@@ -722,5 +758,8 @@
         captionText.innerHTML = dots[slideIndex - 1].alt;
       }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="./js/multi.js"></script>
+    <script src="./js/property.js"></script>
   </body>
 </html>
