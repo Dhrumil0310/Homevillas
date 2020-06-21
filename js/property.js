@@ -35,6 +35,11 @@ x.addListener(thisFunction);
 function thisFunction(x) {
   if (x.matches) {
     window.addEventListener("scroll", () => {
+      if(window.pageYOffset > 0) {
+        form.style.margin = "-50px 0";
+      } else {
+        form.style.margin = "20px 0";
+      }
       let height = document.body.children[3].clientHeight + document.body.children[4].clientHeight + document.body.children[5].clientHeight;
       // if(document.body.clientHeight < window.outerHeight*3) {
       //   height = document.body.clientHeight - window.outerHeight*1.1;
