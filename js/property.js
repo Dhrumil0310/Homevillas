@@ -35,14 +35,25 @@ x.addListener(thisFunction);
 function thisFunction(x) {
   if (x.matches) {
     window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 2500) {
+      // console.log(window.pageYOffset);
+      console.log(window.outerHeight);
+      console.log(document.body.clientHeight);
+      let height = 0;
+      if(document.body.clientHeight < window.outerHeight*3) {
+        height = document.body.clientHeight - window.outerHeight*1.1;
+      } else {
+        height = document.body.clientHeight - window.outerHeight*1.7;
+      }
+      if (window.pageYOffset > height) {
         form.style.display = "none";
       } else {
         form.style.display = "";
       }
     });
   } else {
-    form.style.display = "none";
+    // form.style.display = "none";
+    form.style.position = "relative";
+    form.style.marginLeft = "10px";
   }
 }
 
