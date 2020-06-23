@@ -390,7 +390,7 @@ html {
 /*contact us page*/
 
 .info .cont {
-  padding: 50px;
+  padding-top: 50px;
 }
 
 .info .cinfo {
@@ -424,7 +424,7 @@ html {
   background-color: #5a2e8a !important;
 }
 
-/*contact*/
+/*contact form*/
 
 .contact {
   margin-top: 0;
@@ -484,7 +484,7 @@ textarea {
 /*ABOUT*/
 
 .whoweare {
-  padding: 80px 0;
+  padding-top: 50px;
 }
 
 .whoweare .who {
@@ -626,12 +626,14 @@ textarea {
 
 .leadership .myimage {
   padding-top: 3px;
+  height: 90px;
+  width: 90px;
 }
 
 /*page not found*/
 
 .pagenotfound {
-  padding: 130px 0;
+  padding: 150px 0;
   background-color: #f1f1f1;
 }
 
@@ -1031,7 +1033,7 @@ ul {
 }
 
 .mycont .captchacont {
-  margin: 0px 0px;
+  margin-top: 0px;
   background-color: #fff;
   padding: 30px 10px;
   background-color: #fff;
@@ -1256,5 +1258,8 @@ ul {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+  }
+  .files .col-md-6 {
+    padding-bottom: 20px;
   }
 }
