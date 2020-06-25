@@ -138,7 +138,7 @@ function filterData() {
         property_target.innerHTML += `
             <div class="col-md-6">
                 <div class="card" style="width: 100%;">
-                    <img src="${img}" alt="..." />
+                    <img src="${img}" alt="..." class="card-img-top"/>
                     <div class="card-body">
                         <h2 class="num">Rs. ${property.price} &nbsp <span class="guide">Guide Price</span></h2>
                         <h5 class="card-title">${property.title}</h5>
