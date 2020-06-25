@@ -64,7 +64,7 @@ function thisFunction(x) {
       } else {
         form.style.margin = "20px 0";
       }
-      let height = document.body.children[3].clientHeight + document.body.children[4].clientHeight + document.body.children[5].clientHeight;
+      let height = document.body.children[4].clientHeight + document.body.children[5].clientHeight + document.body.children[6].clientHeight;
       // if(document.body.clientHeight < window.outerHeight*3) {
       //   height = document.body.clientHeight - window.outerHeight*1.1;
       // } else {
