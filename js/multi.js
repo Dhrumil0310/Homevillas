@@ -17,6 +17,12 @@ const app_link = document.getElementById("app_link");
 // }
 
 async function getPageData() {
+    const res = await axios.post(`${url}postlogin`, {token: localStorage.getItem("token")});
+    if(res.data.username) {
+        document.getElementById("logged_user").innerHTML = `
+            <i class="fas fa-user icons mr-1"></i>${res.data.username}
+        `
+    }
     const res = await axios.get(`${url}multi_data`);
     const data = res.data[0];
     fb_link.href = data.fb_link;
