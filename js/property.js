@@ -15,6 +15,7 @@ const similar_target = document.getElementById("similar_target");
 const realtor_name = document.getElementById("realtor_name");
 const realtor_email = document.getElementById("realtor_email");
 const realtor_contact = document.getElementById("realtor_contact");
+const enquire_btn = document.getElementById("enquire_btn");
 
 let data;
 
@@ -89,7 +90,9 @@ async function getPropertyData() {
     },
   });
   data = res.data[0];
-
+  enquire_btn.addEventListener('click', () => {
+    window.location.href = `form.html?title=${data.title}`
+  })
   let price_frame = "Rs. " + data.price;  
   if (data.duration && data.duration != "") {
     price_frame = "Rs. " + data.price + " per " + data.duration;
@@ -102,9 +105,17 @@ async function getPropertyData() {
   key.innerHTML = data.details;
   description.innerHTML = data.description;
 
-  if(data.video && data.video != "") {
-    video.type = data.video.contentType;
-    video.src = `data:${data.video.contentType};base64,${data.video.file}`
+  if(data.video && data.video.length > 0) {
+    console.log("vid yes");
+    var vid = document.createElement("video");
+    var source = document.createElement("source");
+    source.type = data.video[0].contentType;
+    source.src = `data:${data.video[0].contentType};base64,${data.video[0].file}`;
+    vid.controls = true;
+    vid.style.width = "100%";
+    vid.style.height = "400px";
+    vid.appendChild(source);
+    video.appendChild(vid);
   }
 
   image_target.innerHTML = "";
@@ -178,6 +189,7 @@ async function getPropertyData() {
 
   if (data.documents[0]) {
     doc1.href = `data:${data.documents[0].contentType};base64,${data.documents[0].file}`;
+    // doc1.href = `data:${data.video[0].contentType};base64,${data.video[0].file}`
     doc1.download = "New Document 1";
   }
   if (data.documents[1]) {
@@ -202,17 +214,17 @@ async function getPropertyData() {
   if(data.realtor) {
     realtor_name.innerHTML = data.realtor;
   } else {
-    realtor_name = "";
+    realtor_name.innerHTML = "";
   }
   if(data.email) {
     realtor_email.innerHTML = data.email;
   } else {
-    realtor_email = "";
+    realtor_email.innerHTML = "";
   }
   if(data.contact) {
     realtor_contact.innerHTML = data.contact;
   } else {
-    realtor_contact = "";
+    realtor_contact.innerHTML = "";
   }
 
   let similar = res.data;

@@ -115,8 +115,17 @@ async function getPropertyData() {
                             ${property.title}
                         </p>
                         <p>${property.address}</p>
-                        <p><i class="fas fa-bed mr-2 icons"></i>Bedrooms: ${property.bedrooms} &nbsp; <i class="fas fa-restroom mr-2 ml-2 icons">Bathrooms: ${property.bathrooms}</p>
-                        <p><i class="fas fa-city mr-2 icons"></i>Floors: ${property.floors}  &nbsp; SqFt: ${property.feet}</p>
+                        <p>
+                            <i class="fas fa-bed mr-2 icons"></i>
+                            Bedrooms: ${property.bedrooms}
+                            &nbsp;
+                            <i class="fas fa-restroom mr-2 ml-2 icons"></i>
+                            Bathrooms: ${property.bathrooms}
+                        </p>
+                        <p>
+                            <i class="fas fa-car mr-2 icons"></i>
+                            Floors: ${property.floors} &nbsp;&nbsp; SQFT: ${property.feet}
+                        </p>
                     </div>
                 </div>
             </div>

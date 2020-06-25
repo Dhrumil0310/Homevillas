@@ -1,237 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homevilas-Signup</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Karla:wght@700&family=Raleway:wght@600&family=Roboto:wght@400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <section class="topnav">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <img src="images/homevillas-logo.png" alt="" />
-          </div>
-          <div class="col-md-2 text-right" style="float: right;">
-            <p class="text-center">
-              <span class="call">Call for Enquiry</span>
-              <br />
-              202-555-0182
-            </p>
-          </div>
-          <div class="col-md-2 thisbutton" style="float: right;">
-            <button type="button" class="btn btn-outline-danger mybutton">
-              CREATE PROPERTY
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+	<head id="head_top">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Homevilas-Signup</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Karla:wght@700&family=Raleway:wght@600&family=Roboto:wght@400&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="shortcut icon"
+			href="images/favicon.ico"
+			type="image/x-icon"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body onload="getPageData();">
+		<section class="topnav">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						<img
+							src="images/homevillas-logo.png"
+							alt=""
+							id="header_logo"
+							class="brandLogo"
+						/>
+					</div>
+					<div class="col-md-2 text-right" style="float: right;">
+						<p class="text-center">
+							<span class="call">Call for Enquiry</span>
+							<br />
+							202-555-0182
+						</p>
+					</div>
+					<div class="col-md-2 thisbutton" style="float: right;">
+						<button
+							type="button"
+							class="btn btn-outline-danger mybutton"
+						>
+							CREATE PROPERTY
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="container navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="listing.html">LISTINGS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="propertydetails.html">PROPERTY</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdownMenuLink"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              PAGES
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="about.html">ABOUT US</a>
-              <a class="dropdown-item" href="faq.html">FAQ</a>
-              <a class="dropdown-item" href="#">404 PAGE</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">CONTACT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fab fa-facebook-f icons mr-1"></i>
-              <i class="fab fa-twitter icons mr-1"></i>
-              <i class="fab fa-linkedin-in icons mr-1"></i>
-              <i class="fab fa-instagram icons mr-1"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-user icons mr-1"></i>
-              Sign Up/ Register
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="container navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="listing.html">LISTINGS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="propertydetails.html"
+							>PROPERTY</a
+						>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="navbarDropdownMenuLink"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false"
+						>
+							PAGES
+						</a>
+						<div
+							class="dropdown-menu"
+							aria-labelledby="navbarDropdownMenuLink"
+						>
+							<a class="dropdown-item" href="about.html"
+								>ABOUT US</a
+							>
+							<a class="dropdown-item" href="faq.html">FAQ</a>
+							<a class="dropdown-item" href="#">404 PAGE</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">CONTACT</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<i class="fab fa-facebook-f icons mr-1"></i>
+							<i class="fab fa-twitter icons mr-1"></i>
+							<i class="fab fa-linkedin-in icons mr-1"></i>
+							<i class="fab fa-instagram icons mr-1"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="sign.html" id="logged_user">
+							<i class="fas fa-user icons mr-1"></i>
+							Sign Up/ Register
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
-    <div class="wrapper">
-      <div class="container">
-        <div class="signup">Sign Up</div>
-        <div class="login">Log In</div>
+		<div class="wrapper">
+			<div class="container">
+				<div class="signup">Sign Up</div>
+				<div class="login">Log In</div>
+				<form id="signup-form">
+					<div class="signup-form">
+						<p id="sign_msg"></p>
+						<input
+							id="sign_email"
+							type="email"
+							placeholder="Your Email Address"
+							class="input"
+							name="email"
+						/><br />
+						<input
+							type="password"
+							placeholder="Choose a Password"
+							class="input"
+							name="password"
+							id="sign_pw"
+						/><br />
+						<input
+							type="number"
+							placeholder="Contact No"
+							class="input"
+							name="contact"
+							id="sign_contact"
+						/>
+						<input
+							type="number"
+							placeholder="OTP"
+							class="input"
+							name="otp"
+						/>
+						<input type="text" name="otp_id" id="otp_id" hidden />
+						<!-- <button onclick="genOtp(event)">otp</button> -->
+						<button class="btn" onclick="genOtp(event)">
+							Generate OTP
+						</button>
+						<button class="btn" onclick="signUp(event)">
+							Create account
+						</button>
+					</div>
+				</form>
 
-        <div class="signup-form">
-          <input
-            type="text"
-            placeholder="Your Email Address"
-            class="input"
-          /><br />
-          <input
-            type="password"
-            placeholder="Choose a Password"
-            class="input"
-          /><br />
-          <input type="number" placeholder="Contact No" class="input" />
-          <div class="btn">Create account</div>
-        </div>
+				<div class="login-form">
+					<p id="log_msg"></p>
+					<input
+						type="text"
+						placeholder="Email or Username"
+						class="input"
+						id="log_email"
+					/><br />
+					<input
+						type="password"
+						placeholder="Password"
+						class="input"
+						id="log_pw"
+					/><br />
+					<button class="btn log-btn" onclick="logIn(event)">
+						Log In
+					</button>
+				</div>
+			</div>
+		</div>
 
-        <div class="login-form">
-          <input
-            type="text"
-            placeholder="Email or Username"
-            class="input"
-          /><br />
-          <input type="password" placeholder="Password" class="input" /><br />
-          <div class="btn">log in</div>
-          <span><a href="#">I forgot my username or password.</a></span>
-        </div>
-      </div>
-    </div>
+		<section class="brands">
+			<div class="container text-center">
+				<div class="row" id="partner_target">
+					<img src="images/partner03.png" alt="" />
+					<img src="images/partner05.png" alt="" />
+					<img src="images/partner04.png" alt="" />
+					<img src="images/partner06.png" alt="" />
+					<img src="images/partner08.png" alt="" />
+					<img src="images/partner09.png" alt="" />
+					<img src="images/partner10.png" alt="" />
+					<img src="images/partner11.png" alt="" />
+					<img src="images/partner12.png" alt="" />
+				</div>
+			</div>
+		</section>
 
-    <section class="brands">
-      <div class="container text-center">
-        <div class="row">
-          <img src="images/partner03.png" alt="" />
-          <img src="images/partner05.png" alt="" />
-          <img src="images/partner04.png" alt="" />
-          <img src="images/partner06.png" alt="" />
-          <img src="images/partner08.png" alt="" />
-          <img src="images/partner09.png" alt="" />
-          <img src="images/partner10.png" alt="" />
-          <img src="images/partner11.png" alt="" />
-          <img src="images/partner12.png" alt="" />
-        </div>
-      </div>
-    </section>
+		<section class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<p>
+							Home &nbsp Members &nbsp FAQS &nbsp Blog &nbsp
+							Contact US
+						</p>
+						<br />
+						<p>
+							© 2020 REALESTATE. ALL RIGHTS RESERVED. CHIMPSTUDIO
+						</p>
+					</div>
+					<div class="col-md-6 text-right socially">
+						<div id="social">
+							<a
+								class="facebookBtn smGlobalBtn"
+								href="#"
+								id="fb_link"
+								><i class="fab fa-facebook-f"></i
+							></a>
+							<a
+								class="twitterBtn smGlobalBtn"
+								href="#"
+								id="twitter_link"
+								><i class="fab fa-twitter"></i
+							></a>
+							<a
+								class="googleplusBtn smGlobalBtn"
+								href="#"
+								id="linked_link"
+								><i class="fab fa-linkedin-in"></i
+							></a>
+							<a
+								class="linkedinBtn smGlobalBtn"
+								href="#"
+								id="insta_link"
+								><i class="fab fa-instagram"></i
+							></a>
+						</div>
+						<br />
+						<div class="mydiv">
+							<a href="" id="app_link"
+								><img
+									class="myimage"
+									src="images/app-image1.png"
+									alt=""
+							/></a>
+							<a href="" id="play_link"
+								><img
+									class="myimage"
+									src="images/app-image2.png"
+									alt=""
+							/></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p>
-              Home &nbsp Members &nbsp FAQS &nbsp Blog &nbsp Contact US
-            </p>
-            <br />
-            <p>
-              © 2020 REALESTATE. ALL RIGHTS RESERVED. CHIMPSTUDIO
-            </p>
-          </div>
-          <div class="col-md-6 text-right socially">
-            <div id="social">
-              <a class="facebookBtn smGlobalBtn" href="#"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a class="twitterBtn smGlobalBtn" href="#"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a class="googleplusBtn smGlobalBtn" href="#"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a class="linkedinBtn smGlobalBtn" href="#"
-                ><i class="fab fa-instagram"></i
-              ></a>
-            </div>
-            <br />
-            <div class="mydiv">
-              <img class="myimage" src="images/app-image1.png" alt="" />
-              <img class="myimage" src="images/app-image2.png" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+			integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+			crossorigin="anonymous"
+		></script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
-      integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
-      crossorigin="anonymous"
-    ></script>
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+			crossorigin="anonymous"
+		></script>
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
+		<script>
+			$('.login-form').hide();
+			$('.login').css('background', 'none');
 
-    <script>
-      $(".login-form").hide();
-      $(".login").css("background", "none");
+			$('.login').click(function () {
+				$('.signup-form').hide();
+				$('.login-form').show();
+				$('.signup').css('background', 'none');
+				$('.login').css('background', '#fff');
+				document.querySelector('.login-form').style.height = '350px';
+				document.querySelector('.log-btn').style.width = '100%';
+			});
 
-      $(".login").click(function () {
-        $(".signup-form").hide();
-        $(".login-form").show();
-        $(".signup").css("background", "none");
-        $(".login").css("background", "#fff");
-      });
-
-      $(".signup").click(function () {
-        $(".signup-form").show();
-        $(".login-form").hide();
-        $(".login").css("background", "none");
-        $(".signup").css("background", "#fff");
-      });
-
-      $(".btn").click(function () {
-        $(".input").val("");
-      });
-    </script>
-  </body>
+			$('.signup').click(function () {
+				$('.signup-form').show();
+				$('.login-form').hide();
+				$('.login').css('background', 'none');
+				$('.signup').css('background', '#fff');
+			});
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+		<script src="./js/multi.js"></script>
+		<script src="./js/auth.js"></script>
+	</body>
 </html>
