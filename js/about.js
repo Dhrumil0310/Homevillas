@@ -80,6 +80,8 @@ async function getAboutData() {
             `;
         }
     }
+    sessionStorage.setItem("load", "done");
+
 }
 
 

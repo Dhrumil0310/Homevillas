@@ -17,7 +17,8 @@
 		<!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" /> -->
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
-	<body onload="getPageData(); getFaqData();">
+	<body onload="myFunction(); getFaqData(); getPageData();">
+		<div id="load"></div>
 		<section class="topnav">
 			<div class="container">
 				<div class="row">
@@ -26,6 +27,7 @@
 							src="images/homevillas-logo.png"
 							alt=""
 							id="header_logo"
+							class="brandLogo"
 						/>
 					</div>
 					<div class="col-md-2 text-right" style="float: right;">
@@ -583,6 +585,17 @@
 		></script>
 
 		<script>
+			function myFunction() {
+				var preloader = document.getElementById('load');
+				sessionStorage.clear();
+				setInterval(() => {
+					if (sessionStorage.getItem('load') == 'done') {
+						preloader.style.display = 'none';
+					}
+				}, 500);
+				//preloader.style.display="none";
+			}
+
 			// var acc = document.getElementsByClassName('accordion');
 			// var i;
 

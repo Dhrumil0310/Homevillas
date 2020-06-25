@@ -21,7 +21,8 @@
 		/> -->
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
-	<body>
+	<body onload="myFunction(); getPageData();">
+		<div id="load"></div>
 		<section class="topnav">
 			<div class="container">
 				<div class="row">
@@ -152,7 +153,7 @@
 
 		<section class="brands">
 			<div class="container text-center">
-				<div class="row">
+				<div class="row" id="partner_target">
 					<img src="images/partner03.png" alt="" />
 					<img src="images/partner05.png" alt="" />
 					<img src="images/partner04.png" alt="" />
@@ -181,31 +182,45 @@
 					</div>
 					<div class="col-md-6 text-right socially">
 						<div id="social">
-							<a class="facebookBtn smGlobalBtn" href="#"
+							<a
+								class="facebookBtn smGlobalBtn"
+								href="#"
+								id="fb_link"
 								><i class="fab fa-facebook-f"></i
 							></a>
-							<a class="twitterBtn smGlobalBtn" href="#"
+							<a
+								class="twitterBtn smGlobalBtn"
+								href="#"
+								id="twitter_link"
 								><i class="fab fa-twitter"></i
 							></a>
-							<a class="googleplusBtn smGlobalBtn" href="#"
+							<a
+								class="googleplusBtn smGlobalBtn"
+								href="#"
+								id="linked_link"
 								><i class="fab fa-linkedin-in"></i
 							></a>
-							<a class="linkedinBtn smGlobalBtn" href="#"
+							<a
+								class="linkedinBtn smGlobalBtn"
+								href="#"
+								id="insta_link"
 								><i class="fab fa-instagram"></i
 							></a>
 						</div>
 						<br />
 						<div class="mydiv">
-							<img
-								class="myimage"
-								src="images/app-image1.png"
-								alt=""
-							/>
-							<img
-								class="myimage"
-								src="images/app-image2.png"
-								alt=""
-							/>
+							<a href="" id="app_link"
+								><img
+									class="myimage"
+									src="images/app-image1.png"
+									alt=""
+							/></a>
+							<a href="" id="play_link">
+								<img
+									class="myimage"
+									src="images/app-image2.png"
+									alt=""
+							/></a>
 						</div>
 					</div>
 				</div>
@@ -235,6 +250,18 @@
 			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 			crossorigin="anonymous"
 		></script>
+		<script>
+			function myFunction() {
+				var preloader = document.getElementById('load');
+				sessionStorage.clear();
+				setInterval(() => {
+					if (sessionStorage.getItem('load') == 'done') {
+						preloader.style.display = 'none';
+					}
+				}, 500);
+				//preloader.style.display="none";
+			}
+		</script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 		<script src="./js/multi.js"></script>
 	</body>

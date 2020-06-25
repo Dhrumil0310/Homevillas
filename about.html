@@ -17,7 +17,8 @@
 		<!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" /> -->
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
-	<body onload="getPageData(); getAboutData();">
+	<body onload="myFunction(); getAboutData(); getPageData();">
+		<div id="load"></div>
 		<section class="topnav">
 			<div class="container">
 				<div class="row">
@@ -603,6 +604,22 @@
 			var slideIndex = 1;
 			showSlides(slideIndex);
 
+			var stop;
+			function myFunction() {
+				sessionStorage.clear();
+				stop = setInterval(() => {
+					if (sessionStorage.getItem('load') == 'done') {
+						stopLoad();
+					}
+				}, 1000);
+				//preloader.style.display="none";
+			}
+
+			function stopLoad() {
+				var preloader = document.getElementById('load');
+				clearInterval(stop);
+				preloader.style.display = 'none';
+			}
 			function plusSlides(n) {
 				showSlides((slideIndex += n));
 			}

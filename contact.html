@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="./css/style.css" />
 
   </head>
-  <body onload="getPageData(); getTestimonialData();">
-
+  <body onload="myFunction(); getTestimonialData(); getPageData();">
+    <div id="load"></div>
     <section class="topnav">
       <div class="container">
         <div class="row">
@@ -146,19 +146,7 @@
                       (0044) 123 456 7891</p>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-1" style="text-align: center;" id="social1">
-                    <a class="mdGlobalBtn" href="#"
-                    ><i class="fas fa-fax"></i>
-                  </a>
-                  </div>
-                  <div class="col-md-6">
-                    <p>Address:
-                      <br>
-                        Fax:
-                        (001) 123 456 7891</p>
-                  </div>
-                </div>
+                
                 <div class="row">
                   <div class="col-md-1" style="text-align: center;" id="social1">
                     <a class="mdGlobalBtn" href="#"
@@ -168,7 +156,7 @@
                   <div class="col-md-6">
                     <p>Email Address;
                       <br>
-                      info@example.com</p>
+                      theindiahousing@gmail.com</p>
                   </div>
                 </div>
             </div>
@@ -375,7 +363,20 @@
 
       var slideIndex = 1;
       showSlides(slideIndex);
+      var stop;
+      function myFunction() {
+				sessionStorage.clear();
+				setTimeout(() => {
+          stopLoad();
+        }, 2000);
+				//preloader.style.display="none";
+      }
 
+      function stopLoad() {
+        var preloader = document.getElementById('load');
+        preloader.style.display = "none";
+      }
+      
       function plusSlides(n) {
         showSlides((slideIndex += n));
       }

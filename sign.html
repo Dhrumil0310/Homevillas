@@ -21,7 +21,8 @@
 		/>
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
-	<body onload="getPageData();">
+	<body onload="myFunction(); getPageData();">
+		<div id="load"></div>
 		<section class="topnav">
 			<div class="container">
 				<div class="row">
@@ -285,6 +286,15 @@
 		></script>
 
 		<script>
+			function myFunction() {
+				var preloader = document.getElementById('load');
+				sessionStorage.clear();
+				setTimeout(() => {
+					preloader.style.display = 'none';
+				}, 1500);
+				//preloader.style.display="none";
+			}
+
 			$('.login-form').hide();
 			$('.login').css('background', 'none');
 

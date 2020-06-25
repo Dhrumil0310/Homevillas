@@ -131,6 +131,8 @@ async function getPropertyData() {
             </div>
         `
     }
+    sessionStorage.setItem("load", "done");
+
 }
 
 async function contactSend(evt) {

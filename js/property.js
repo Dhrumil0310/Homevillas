@@ -262,6 +262,8 @@ async function getPropertyData() {
             </div>        
         `;
   }
+  sessionStorage.setItem("load", "done");
+
 }
 
 //Change Plan Image on Click

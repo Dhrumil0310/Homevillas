@@ -1,5 +1,5 @@
-// const url = "api/data/";
-const url = "http://localhost:5000/api/data/";
+const url = "api/data/";
+// const url = "http://localhost:5000/api/data/";
 
 const header_logo = document.getElementById("header_logo");
 const partner_target = document.getElementById("partner_target");
@@ -168,5 +168,7 @@ async function getFaqData() {
             }
         });
     }
+    sessionStorage.setItem("load", "done");
+
 }
 

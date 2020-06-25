@@ -61,6 +61,8 @@ async function getPropertyData() {
         `
     }
     price_max.value = max_value;
+    sessionStorage.setItem("load", "done");
+
 }
 
 function filterData() {

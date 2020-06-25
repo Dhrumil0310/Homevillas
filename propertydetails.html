@@ -26,7 +26,8 @@
 		/> -->
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
-	<body onload="getPageData(); getPropertyData();">
+	<body onload="myFunction(); getPropertyData(); getPageData();">
+		<div id="load"></div>
 		<section class="topnav">
 			<div class="container">
 				<div class="row">
@@ -816,6 +817,17 @@
 		<script>
 			var slideIndex = 1;
 			showSlides(slideIndex);
+
+			function myFunction() {
+				var preloader = document.getElementById('load');
+				sessionStorage.clear();
+				setInterval(() => {
+					if (sessionStorage.getItem('load') == 'done') {
+						preloader.style.display = 'none';
+					}
+				}, 500);
+				//preloader.style.display="none";
+			}
 
 			// Next/previous controls
 			function plusSlides(n) {

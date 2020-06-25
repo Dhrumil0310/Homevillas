@@ -17,8 +17,8 @@
     <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" /> -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body onload="getPageData(); getPropertyData();">
-
+  <body onload="myFunction(); getPropertyData(); getPageData();">
+    <div id="load"></div>
     <section class="topnav">
       <div class="container">
         <div class="row">
@@ -412,6 +412,25 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
+    <script>
+     var stop;
+      function myFunction() {
+				sessionStorage.clear();
+				stop = setInterval(() => {
+					if (sessionStorage.getItem('load') == 'done') {
+            stopLoad();
+          }
+				}, 1000);
+				//preloader.style.display="none";
+      }
+
+      function stopLoad() {
+        var preloader = document.getElementById('load');
+        clearInterval(stop);
+        preloader.style.display = "none";
+      }
+      
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="./js/multi.js"></script>
     <script src="./js/listing.js"></script>
