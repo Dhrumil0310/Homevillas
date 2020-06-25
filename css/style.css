@@ -18,6 +18,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.topnav .brandLogo {
+  width: 150px;
+}
+
 .topnav {
   padding-top: 10px;
   padding-bottom: 0;
@@ -432,9 +436,21 @@ html {
   background-color: #f2f2f2;
 }
 
+.myform {
+  margin: 50px 0;
+}
+
+.myform .container {
+  padding: 50px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+}
+
 .contact input[type="text"],
 select,
-textarea {
+textarea,
+.myform input[type="text"],
+.myform input[type="email"] {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -445,7 +461,8 @@ textarea {
   resize: vertical;
 }
 
-.contact input[type="submit"] {
+.contact input[type="submit"],
+.myform input[type="submit"] {
   background-color: #4caf50;
   color: white;
   padding: 12px 20px;
@@ -454,7 +471,8 @@ textarea {
   cursor: pointer;
 }
 
-.contact input[type="submit"]:hover {
+.contact input[type="submit"]:hover,
+.myform input[type="submit"] {
   background-color: #45a049;
 }
 
@@ -1190,6 +1208,12 @@ ul {
   transition: opacity 0.2s;
 }
 
+@media screen and (max-width: 768px) and (min-width: 767px) {
+  .topnav .brandLogo {
+    margin-left: 0px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .topnav .col-md-8 {
     text-align: center;
@@ -1262,4 +1286,92 @@ ul {
   .files .col-md-6 {
     padding-bottom: 20px;
   }
+}
+
+.wrapper {
+  padding: 80px;
+  background-color: #f1f1f1;
+}
+
+/*sign up*/
+.wrapper .container {
+  width: 450px;
+}
+
+.wrapper .signup,
+.wrapper .login {
+  width: 50%;
+  background: #fff;
+  float: left;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.wrapper .signup-form,
+.wrapper .login-form {
+  background: #fff;
+  padding: 40px;
+  clear: both;
+  width: 100%;
+  box-sizing: border-box;
+  height: 400px;
+}
+
+.wrapper .input {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border: 2px solid #e9eaea;
+  color: #3e3e40;
+  font-size: 14px;
+  outline: none;
+  transform: all 0.5s ease;
+}
+
+.wrapper .input:focus {
+  border: 2px solid #34b3a0;
+}
+
+.wrapper .btn {
+  width: 100%;
+  background: red;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.wrapper span a {
+  text-decoration: none;
+  color: #000;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #3e3e40;
+  font-family: roboto;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #3e3e40;
+  font-family: roboto;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #3e3e40;
+  font-family: roboto;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #3e3e40;
+  font-family: roboto;
 }
