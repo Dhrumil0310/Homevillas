@@ -524,20 +524,20 @@
     ></script>
 
     <script>
-      // var acc = document.getElementsByClassName('accordion');
-      // var i;
+      var acc = document.getElementsByClassName("accordion");
+      var i;
 
-      // for (i = 0; i < acc.length; i++) {
-      // 	acc[i].addEventListener('click', function () {
-      // 		this.classList.toggle('active');
-      // 		var panel = this.nextElementSibling;
-      // 		if (panel.style.maxHeight) {
-      // 			panel.style.maxHeight = null;
-      // 		} else {
-      // 			panel.style.maxHeight = panel.scrollHeight + 'px';
-      // 		}
-      // 	});
-      // }
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="./js/multi.js"></script>
