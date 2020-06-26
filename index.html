@@ -1,613 +1,759 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head id="head_top">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homevillas</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Karla:wght@700&family=Raleway:wght@600&family=Roboto:wght@400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body
-    onload="getPageData(); getIndexData(); getPropertyData(); getTestimonialData(); "
-  >
-    <section class="topnav">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <img
-              class="brandLogo"
-              src="images/homevillas-logo.png"
-              alt=""
-              id="header_logo"
-            />
-          </div>
-          <div class="col-md-2 text-right" style="float: right;">
-            <p class="text-center" id="contact_target">
-              <span class="call">Call for Enquiry</span>
-              <br />
-              202-555-0182
-            </p>
-          </div>
-          <div class="col-md-2 thisbutton" style="float: right;">
-            <button type="button" class="btn btn-outline-danger mybutton">
-              CREATE PROPERTY
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+	<head id="head_top">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Homevillas</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Karla:wght@700&family=Raleway:wght@600&family=Roboto:wght@400&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="shortcut icon"
+			href="images/favicon.ico"
+			type="image/x-icon"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body
+		onload="myFunction(); getIndexData(); getPropertyData(); getTestimonialData(); getPageData();"
+	>
+		<div id="load"></div>
+		<section class="topnav">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						<img
+							class="brandLogo"
+							src="images/homevillas-logo.png"
+							alt=""
+							id="header_logo"
+						/>
+					</div>
+					<div class="col-md-2 text-right" style="float: right;">
+						<p class="text-center" id="contact_target">
+							<span class="call">Call for Enquiry</span>
+							<br />
+							202-555-0182
+						</p>
+					</div>
+					<div class="col-md-2 thisbutton" style="float: right;">
+						<button
+							type="button"
+							class="btn btn-outline-danger mybutton"
+						>
+							CREATE PROPERTY
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <!--container used in ul-->
+		<!--container used in ul-->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="container navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="listing.html">LISTINGS</a>
-          </li>
-          <!-- <li class="nav-item">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="container navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="listing.html">LISTINGS</a>
+					</li>
+					<!-- <li class="nav-item">
             <a class="nav-link" href="propertydetails.html">PROPERTY</a>
           </li> -->
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdownMenuLink"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              PAGES
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="about.html">ABOUT US</a>
-              <a class="dropdown-item" href="faq.html">FAQ</a>
-              <a class="dropdown-item" href="pagenotfound.html">404 PAGE</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">CONTACT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fab fa-facebook-f icons mr-1"></i>
-              <i class="fab fa-twitter icons mr-1"></i>
-              <i class="fab fa-linkedin-in icons mr-1"></i>
-              <i class="fab fa-instagram icons mr-1"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-user icons mr-1"></i>
-              Sign Up/ Register
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="navbarDropdownMenuLink"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false"
+						>
+							PAGES
+						</a>
+						<div
+							class="dropdown-menu"
+							aria-labelledby="navbarDropdownMenuLink"
+						>
+							<a class="dropdown-item" href="about.html"
+								>ABOUT US</a
+							>
+							<a class="dropdown-item" href="faq.html">FAQ</a>
+							<a class="dropdown-item" href="pagenotfound.html"
+								>404 PAGE</a
+							>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">CONTACT</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<i class="fab fa-facebook-f icons mr-1"></i>
+							<i class="fab fa-twitter icons mr-1"></i>
+							<i class="fab fa-linkedin-in icons mr-1"></i>
+							<i class="fab fa-instagram icons mr-1"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="sign.html" id="logged_user">
+							<i class="fas fa-user icons mr-1"></i>
+							Sign Up/ Register
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
-    <section class="section1">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h3 id="index_top_h3">Find your dream house!</h3>
-            <h5 id="index_top_h5">
-              We are offering the best Real Estate Deals
-            </h5>
-            <br />
-            <br />
-            <p id="index_top_p">
-              We sell a property every 45 minutes <br /><br />
-              We abide by the strictest codes of practice
-              <br /><br />
-              11,300 buyers registered each month <br /><br />
-            </p>
-            <!-- <p>We abide by the strictest codes of practice</p>
+		<section class="section1">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h3 id="index_top_h3">Find your dream house!</h3>
+						<h5 id="index_top_h5">
+							We are offering the best Real Estate Deals
+						</h5>
+						<br />
+						<br />
+						<p id="index_top_p">
+							We sell a property every 45 minutes <br /><br />
+							We abide by the strictest codes of practice
+							<br /><br />
+							11,300 buyers registered each month <br /><br />
+						</p>
+						<!-- <p>We abide by the strictest codes of practice</p>
 						<p>11,300 buyers registered each month</p> -->
-          </div>
-        </div>
-      </div>
-    </section>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section class="features">
-      <div class="container">
-        <h5 class="feat">Featured Properties</h5>
-        <p class="feat1">
-          FEATURED FOR SALE &nbsp FEATURED TO RENT
-          <a href="listing.html">
-            <button class="but2" style="float: right;">
-              Show More Property
-            </button></a
-          >
-        </p>
-        <div class="row" id="property_target">
-          <div class="col-md-4">
-            <div class="card" style="width: 100%;">
-              <img
-                class="card-img-top"
-                src="images/property-image15-409x250.jpg"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  $21500 &nbsp Guide price
-                </h5>
-                <p class="card-text">
-                  New Superior Quality House For Sale
-                </p>
-                <p>London, United Kingdom</p>
-                <p>
-                  <i class="fas fa-bed mr-2 icons"></i>Bedrooms 4
-                  <i class="fas fa-restroom mr-2 ml-2 icons"></i>Bathrooms 2
-                </p>
-                <p><i class="fas fa-car mr-2 icons"></i>Garage 2 SqFt 11050</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card" style="width: 100%;">
-              <img
-                class="card-img-top"
-                src="images/banner_3-409x250.jpg"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  $21500 &nbsp Guide price
-                </h5>
-                <p class="card-text">
-                  New Superior Quality House For Sale
-                </p>
-                <p>London, United Kingdom</p>
-                <p>
-                  <i class="fas fa-bed mr-2 icons"></i>Bedrooms 4
-                  <i class="fas fa-restroom mr-2 ml-2 icons"></i>Bathrooms 2
-                </p>
-                <p><i class="fas fa-car mr-2 icons"></i>Garage 2 SqFt 11050</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card" style="width: 100%;">
-              <img
-                class="card-img-top"
-                src="images/property-image18-409x250.jpg"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  $21500 &nbsp Guide price
-                </h5>
-                <p class="card-text">
-                  New Superior Quality House For Sale
-                </p>
-                <p>London, United Kingdom</p>
-                <p>
-                  <i class="fas fa-bed mr-2 icons"></i>Bedrooms 4
-                  <i class="fas fa-restroom mr-2 ml-2 icons"></i>Bathrooms 2
-                </p>
-                <p><i class="fas fa-car mr-2 icons"></i>Garage 2 SqFt 11050</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card" style="width: 100%;">
-              <img
-                class="card-img-top"
-                src="images/property-image10-409x250.jpg"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  $21500 &nbsp Guide price
-                </h5>
-                <p class="card-text">
-                  New Superior Quality House For Sale
-                </p>
-                <p>London, United Kingdom</p>
-                <p>
-                  <i class="fas fa-bed mr-2 icons"></i>Bedrooms 4
-                  <i class="fas fa-restroom mr-2 ml-2 icons"></i>Bathrooms 2
-                </p>
-                <p><i class="fas fa-car mr-2 icons"></i>Garage 2 SqFt 11050</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card" style="width: 100%;">
-              <img
-                class="card-img-top"
-                src="images/property-image12-409x250.jpg"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  $21500 &nbsp Guide price
-                </h5>
-                <p class="card-text">
-                  New Superior Quality House For Sale
-                </p>
-                <p>London, United Kingdom</p>
-                <p>
-                  <i class="fas fa-bed mr-2 icons"></i>Bedrooms 4
-                  <i class="fas fa-restroom mr-2 ml-2 icons"></i>Bathrooms 2
-                </p>
-                <p><i class="fas fa-car mr-2 icons"></i>Garage 2 SqFt 11050</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card" style="width: 100%;">
-              <img
-                class="card-img-top"
-                src="images/property-image01-409x250.jpg"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  $21500 &nbsp Guide price
-                </h5>
-                <p class="card-text">
-                  New Superior Quality House For Sale
-                </p>
-                <p>London, United Kingdom</p>
-                <p>
-                  <i class="fas fa-bed mr-2 icons"></i>Bedrooms 4
-                  <i class="fas fa-restroom mr-2 ml-2 icons"></i>Bathrooms 2
-                </p>
-                <p><i class="fas fa-car mr-2 icons"></i>Garage 2 SqFt 11050</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+		<section class="features">
+			<div class="container">
+				<h5 class="feat">Newly Listed Properties</h5>
+				<p class="feat1">
+					FEATURED FOR SALE &nbsp FEATURED TO RENT
+					<a href="listing.html">
+						<button class="but2" style="float: right;">
+							Show More Property
+						</button></a
+					>
+				</p>
+				<div class="row" id="property_target">
+					<div class="col-md-4">
+						<div class="card" style="width: 100%;">
+							<img
+								class="card-img-top"
+								src="images/property-image15-409x250.jpg"
+								alt="Card image cap"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">
+									$21500 &nbsp Guide price
+								</h5>
+								<p class="card-text">
+									New Superior Quality House For Sale
+								</p>
+								<p>London, United Kingdom</p>
+								<p>
+									<i class="fas fa-bed mr-2 icons"></i
+									>Bedrooms 4
+									<i
+										class="fas fa-restroom mr-2 ml-2 icons"
+									></i
+									>Bathrooms 2
+								</p>
+								<p>
+									<i class="fas fa-car mr-2 icons"></i>Garage
+									2 SqFt 11050
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card" style="width: 100%;">
+							<img
+								class="card-img-top"
+								src="images/banner_3-409x250.jpg"
+								alt="Card image cap"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">
+									$21500 &nbsp Guide price
+								</h5>
+								<p class="card-text">
+									New Superior Quality House For Sale
+								</p>
+								<p>London, United Kingdom</p>
+								<p>
+									<i class="fas fa-bed mr-2 icons"></i
+									>Bedrooms 4
+									<i
+										class="fas fa-restroom mr-2 ml-2 icons"
+									></i
+									>Bathrooms 2
+								</p>
+								<p>
+									<i class="fas fa-car mr-2 icons"></i>Garage
+									2 SqFt 11050
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card" style="width: 100%;">
+							<img
+								class="card-img-top"
+								src="images/property-image18-409x250.jpg"
+								alt="Card image cap"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">
+									$21500 &nbsp Guide price
+								</h5>
+								<p class="card-text">
+									New Superior Quality House For Sale
+								</p>
+								<p>London, United Kingdom</p>
+								<p>
+									<i class="fas fa-bed mr-2 icons"></i
+									>Bedrooms 4
+									<i
+										class="fas fa-restroom mr-2 ml-2 icons"
+									></i
+									>Bathrooms 2
+								</p>
+								<p>
+									<i class="fas fa-car mr-2 icons"></i>Garage
+									2 SqFt 11050
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card" style="width: 100%;">
+							<img
+								class="card-img-top"
+								src="images/property-image10-409x250.jpg"
+								alt="Card image cap"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">
+									$21500 &nbsp Guide price
+								</h5>
+								<p class="card-text">
+									New Superior Quality House For Sale
+								</p>
+								<p>London, United Kingdom</p>
+								<p>
+									<i class="fas fa-bed mr-2 icons"></i
+									>Bedrooms 4
+									<i
+										class="fas fa-restroom mr-2 ml-2 icons"
+									></i
+									>Bathrooms 2
+								</p>
+								<p>
+									<i class="fas fa-car mr-2 icons"></i>Garage
+									2 SqFt 11050
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card" style="width: 100%;">
+							<img
+								class="card-img-top"
+								src="images/property-image12-409x250.jpg"
+								alt="Card image cap"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">
+									$21500 &nbsp Guide price
+								</h5>
+								<p class="card-text">
+									New Superior Quality House For Sale
+								</p>
+								<p>London, United Kingdom</p>
+								<p>
+									<i class="fas fa-bed mr-2 icons"></i
+									>Bedrooms 4
+									<i
+										class="fas fa-restroom mr-2 ml-2 icons"
+									></i
+									>Bathrooms 2
+								</p>
+								<p>
+									<i class="fas fa-car mr-2 icons"></i>Garage
+									2 SqFt 11050
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card" style="width: 100%;">
+							<img
+								class="card-img-top"
+								src="images/property-image01-409x250.jpg"
+								alt="Card image cap"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">
+									$21500 &nbsp Guide price
+								</h5>
+								<p class="card-text">
+									New Superior Quality House For Sale
+								</p>
+								<p>London, United Kingdom</p>
+								<p>
+									<i class="fas fa-bed mr-2 icons"></i
+									>Bedrooms 4
+									<i
+										class="fas fa-restroom mr-2 ml-2 icons"
+									></i
+									>Bathrooms 2
+								</p>
+								<p>
+									<i class="fas fa-car mr-2 icons"></i>Garage
+									2 SqFt 11050
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section class="texts">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <h5>About Pin Board</h5>
-            <p>
-              Property Management in London Attractive Landscaped Gardens City
-              Centre Within Easy Reach About Pinboard Homevillas Sale Jobs in
-              London
-            </p>
-          </div>
-          <div class="col-md-3">
-            <h5>Our Estate Agencies</h5>
-            <p>
-              Central London estate members East London estate members North
-              London estate members South London estate members Surrey estate
-              members
-            </p>
-          </div>
-          <div class="col-md-3">
-            <h5>Popular Searches</h5>
-            <p>
-              London Property for Sale New Homes in London London Shortlist
-              Homes London Property Listings New Commercial Property
-            </p>
-          </div>
-          <div class="col-md-3">
-            <h5>Property List</h5>
-            <p>
-              New Homes in London Home Valuation Service Area Guides for Client
-              Daily Rental Reports Search in Homevillas
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+		<section class="texts">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<h5>About Pin Board</h5>
+						<p>
+							Property Management in London Attractive Landscaped
+							Gardens City Centre Within Easy Reach About Pinboard
+							Homevillas Sale Jobs in London
+						</p>
+					</div>
+					<div class="col-md-3">
+						<h5>Our Estate Agencies</h5>
+						<p>
+							Central London estate members East London estate
+							members North London estate members South London
+							estate members Surrey estate members
+						</p>
+					</div>
+					<div class="col-md-3">
+						<h5>Popular Searches</h5>
+						<p>
+							London Property for Sale New Homes in London London
+							Shortlist Homes London Property Listings New
+							Commercial Property
+						</p>
+					</div>
+					<div class="col-md-3">
+						<h5>Property List</h5>
+						<p>
+							New Homes in London Home Valuation Service Area
+							Guides for Client Daily Rental Reports Search in
+							Homevillas
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section class="tasks">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 text-center">
-            <img class="myimage" src="images/home-service1.png" alt="" />
-            <h5 id="index_task_h5_1">DESCRIBE YOUR TASK</h5>
-            <p id="index_task_p_1">
-              HomeVillas have theme search, user can manually draw lines on map,
-              all ads property listings in that area show up as a result.
-            </p>
-          </div>
-          <div class="col-md-4 text-center">
-            <img class="myimage" src="images/home-service2.png" alt="" />
-            <h5 id="index_task_h5_2">DESCRIBE YOUR TASK</h5>
-            <p id="index_task_p_2">
-              HomeVillas have theme search, user can manually draw lines on map,
-              all ads property listings in that area show up as a result.
-            </p>
-          </div>
-          <div class="col-md-4 text-center">
-            <img class="myimage" src="images/home-service3.png" alt="" />
-            <h5 id="index_task_h5_3">DESCRIBE YOUR TASK</h5>
-            <p id="index_task_p_3">
-              HomeVillas have theme search, user can manually draw lines on map,
-              all ads property listings in that area show up as a result.
-            </p>
-          </div>
-        </div>
-        <h1 class="text-center">NEWS AND STORIES</h1>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card" style="width: 100%;">
-              <img
-                src="images/property-image06-360x223.jpg"
-                class="card-img-top newscard"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  The Leader In Real Estate ...
-                </h5>
-                <p class="card-text">
-                  Integer mattis magna volutpat euismod habitant mi faucibus
-                  elementum proin mi, lobortis iaculis dolor torquent...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card" style="width: 100%;">
-              <img
-                src="images/property-image08-360x223.jpg"
-                class="card-img-top newscard"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  We’ll Bring You The Best ...
-                </h5>
-                <p class="card-text">
-                  Integer mattis magna volutpat euismod habitant mi faucibus
-                  elementum proin mi, lobortis iaculis dolor torquent...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card" style="width: 100%;">
-              <img
-                src="images/property-image09-360x223.jpg"
-                class="card-img-top newscard"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  Reader’s Look On An ...
-                </h5>
-                <p class="card-text">
-                  Integer mattis magna volutpat euismod habitant mi faucibus
-                  elementum proin mi, lobortis iaculis dolor torquent...
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+		<section class="tasks">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 text-center">
+						<img
+							class="myimage"
+							src="images/home-service1.png"
+							alt=""
+						/>
+						<h5 id="index_task_h5_1">DESCRIBE YOUR TASK</h5>
+						<p id="index_task_p_1">
+							HomeVillas have theme search, user can manually draw
+							lines on map, all ads property listings in that area
+							show up as a result.
+						</p>
+					</div>
+					<div class="col-md-4 text-center">
+						<img
+							class="myimage"
+							src="images/home-service2.png"
+							alt=""
+						/>
+						<h5 id="index_task_h5_2">DESCRIBE YOUR TASK</h5>
+						<p id="index_task_p_2">
+							HomeVillas have theme search, user can manually draw
+							lines on map, all ads property listings in that area
+							show up as a result.
+						</p>
+					</div>
+					<div class="col-md-4 text-center">
+						<img
+							class="myimage"
+							src="images/home-service3.png"
+							alt=""
+						/>
+						<h5 id="index_task_h5_3">DESCRIBE YOUR TASK</h5>
+						<p id="index_task_p_3">
+							HomeVillas have theme search, user can manually draw
+							lines on map, all ads property listings in that area
+							show up as a result.
+						</p>
+					</div>
+				</div>
+				<h1 class="text-center">NEWS AND STORIES</h1>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card" style="width: 100%;">
+							<img
+								src="images/property-image06-360x223.jpg"
+								class="card-img-top newscard"
+								alt="..."
+							/>
+							<div class="card-body">
+								<h5 class="card-title">
+									The Leader In Real Estate ...
+								</h5>
+								<p class="card-text">
+									Integer mattis magna volutpat euismod
+									habitant mi faucibus elementum proin mi,
+									lobortis iaculis dolor torquent...
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card" style="width: 100%;">
+							<img
+								src="images/property-image08-360x223.jpg"
+								class="card-img-top newscard"
+								alt="..."
+							/>
+							<div class="card-body">
+								<h5 class="card-title">
+									We’ll Bring You The Best ...
+								</h5>
+								<p class="card-text">
+									Integer mattis magna volutpat euismod
+									habitant mi faucibus elementum proin mi,
+									lobortis iaculis dolor torquent...
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card" style="width: 100%;">
+							<img
+								src="images/property-image09-360x223.jpg"
+								class="card-img-top newscard"
+								alt="..."
+							/>
+							<div class="card-body">
+								<h5 class="card-title">
+									Reader’s Look On An ...
+								</h5>
+								<p class="card-text">
+									Integer mattis magna volutpat euismod
+									habitant mi faucibus elementum proin mi,
+									lobortis iaculis dolor torquent...
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section class="Testimonials">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-center m-auto">
-            <h2>Testimonials</h2>
-            <h5>WE HAVE THE RIGHT PROPERTIES NEEDS.</h5>
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-              <!-- Carousel indicators -->
-              <ol class="carousel-indicators" id="test_indicator">
-                <li
-                  data-target="#myCarousel"
-                  data-slide-to="0"
-                  class="active"
-                ></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-              </ol>
-              <!-- Wrapper for carousel items -->
-              <div class="carousel-inner" id="testimonial_target">
-                <div class="item carousel-item active">
-                  <div class="img-box">
-                    <img src="images/testimonial-thumbnail3.jpg" alt="" />
-                  </div>
-                  <p class="testimonial">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                    eu sem tempor, varius quam at, luctus dui. Mauris magna
-                    metus, dapibus nec turpis vel, semper malesuada ante. Idac
-                    bibendum scelerisque non non purus. Suspendisse varius nibh
-                    non aliquet.
-                  </p>
-                  <p class="overview"><b>Paula Wilson</b>, Media Analyst</p>
-                </div>
-                <div class="item carousel-item">
-                  <div class="img-box">
-                    <img src="images/testimonial-thumbnail1.jpg" alt="" />
-                  </div>
-                  <p class="testimonial">
-                    Vestibulum quis quam ut magna consequat faucibus.
-                    Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus
-                    dictum risus. Pellentesque viverra sagittis quam at mattis.
-                    Suspendisse potenti. Aliquam sit amet gravida nibh,
-                    facilisis gravida odio.
-                  </p>
-                  <p class="overview"><b>Antonio Moreno</b>, Web Developer</p>
-                </div>
-                <div class="item carousel-item">
-                  <div class="img-box">
-                    <img src="images/testimonial-thumbnail4.jpg" alt="" />
-                  </div>
-                  <p class="testimonial">
-                    Phasellus vitae suscipit justo. Mauris pharetra feugiat ante
-                    id lacinia. Etiam faucibus mauris id tempor egestas. Duis
-                    luctus turpis at accumsan tincidunt. Phasellus risus risus,
-                    volutpat vel tellus ac, tincidunt fringilla massa. Etiam
-                    hendrerit dolor eget rutrum.
-                  </p>
-                  <p class="overview"><b>Michael Holz</b>, Seo Analyst</p>
-                </div>
-              </div>
-              <!-- Carousel controls -->
-              <a
-                class="carousel-control left carousel-control-prev"
-                href="#myCarousel"
-                data-slide="prev"
-              >
-                <i class="fa fa-angle-left icon"></i>
-              </a>
-              <a
-                class="carousel-control right carousel-control-next"
-                href="#myCarousel"
-                data-slide="next"
-              >
-                <i class="fa fa-angle-right icon" style="color: black;"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+		<section class="Testimonials">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-center m-auto">
+						<h2>Testimonials</h2>
+						<h5>WE HAVE THE RIGHT PROPERTIES NEEDS.</h5>
+						<div
+							id="myCarousel"
+							class="carousel slide"
+							data-ride="carousel"
+						>
+							<!-- Carousel indicators -->
+							<ol class="carousel-indicators" id="test_indicator">
+								<li
+									data-target="#myCarousel"
+									data-slide-to="0"
+									class="active"
+								></li>
+								<li
+									data-target="#myCarousel"
+									data-slide-to="1"
+								></li>
+								<li
+									data-target="#myCarousel"
+									data-slide-to="2"
+								></li>
+							</ol>
+							<!-- Wrapper for carousel items -->
+							<div class="carousel-inner" id="testimonial_target">
+								<div class="item carousel-item active">
+									<div class="img-box">
+										<img
+											src="images/testimonial-thumbnail3.jpg"
+											alt=""
+										/>
+									</div>
+									<p class="testimonial">
+										Lorem ipsum dolor sit amet, consectetur
+										adipiscing elit. Nam eu sem tempor,
+										varius quam at, luctus dui. Mauris magna
+										metus, dapibus nec turpis vel, semper
+										malesuada ante. Idac bibendum
+										scelerisque non non purus. Suspendisse
+										varius nibh non aliquet.
+									</p>
+									<p class="overview">
+										<b>Paula Wilson</b>, Media Analyst
+									</p>
+								</div>
+								<div class="item carousel-item">
+									<div class="img-box">
+										<img
+											src="images/testimonial-thumbnail1.jpg"
+											alt=""
+										/>
+									</div>
+									<p class="testimonial">
+										Vestibulum quis quam ut magna consequat
+										faucibus. Pellentesque eget nisi a mi
+										suscipit tincidunt. Utmtc tempus dictum
+										risus. Pellentesque viverra sagittis
+										quam at mattis. Suspendisse potenti.
+										Aliquam sit amet gravida nibh, facilisis
+										gravida odio.
+									</p>
+									<p class="overview">
+										<b>Antonio Moreno</b>, Web Developer
+									</p>
+								</div>
+								<div class="item carousel-item">
+									<div class="img-box">
+										<img
+											src="images/testimonial-thumbnail4.jpg"
+											alt=""
+										/>
+									</div>
+									<p class="testimonial">
+										Phasellus vitae suscipit justo. Mauris
+										pharetra feugiat ante id lacinia. Etiam
+										faucibus mauris id tempor egestas. Duis
+										luctus turpis at accumsan tincidunt.
+										Phasellus risus risus, volutpat vel
+										tellus ac, tincidunt fringilla massa.
+										Etiam hendrerit dolor eget rutrum.
+									</p>
+									<p class="overview">
+										<b>Michael Holz</b>, Seo Analyst
+									</p>
+								</div>
+							</div>
+							<!-- Carousel controls -->
+							<a
+								class="carousel-control left carousel-control-prev"
+								href="#myCarousel"
+								data-slide="prev"
+							>
+								<i class="fa fa-angle-left icon"></i>
+							</a>
+							<a
+								class="carousel-control right carousel-control-next"
+								href="#myCarousel"
+								data-slide="next"
+							>
+								<i
+									class="fa fa-angle-right icon"
+									style="color: black;"
+								></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <!--solve error not responsive-->
-    <section class="brands">
-      <div class="container text-center">
-        <div class="row" id="partner_target">
-          <img src="images/partner03.png" alt="" />
-          <img src="images/partner05.png" alt="" />
-          <img src="images/partner04.png" alt="" />
-          <img src="images/partner06.png" alt="" />
-          <img src="images/partner08.png" alt="" />
-          <img src="images/partner09.png" alt="" />
-          <img src="images/partner10.png" alt="" />
-          <img src="images/partner11.png" alt="" />
-          <img src="images/partner12.png" alt="" />
-        </div>
-      </div>
-    </section>
+		<!--solve error not responsive-->
+		<section class="brands">
+			<div class="container text-center">
+				<div class="row" id="partner_target">
+					<img src="images/partner03.png" alt="" />
+					<img src="images/partner05.png" alt="" />
+					<img src="images/partner04.png" alt="" />
+					<img src="images/partner06.png" alt="" />
+					<img src="images/partner08.png" alt="" />
+					<img src="images/partner09.png" alt="" />
+					<img src="images/partner10.png" alt="" />
+					<img src="images/partner11.png" alt="" />
+					<img src="images/partner12.png" alt="" />
+				</div>
+			</div>
+		</section>
 
-    <section class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p>
-              Home &nbsp Members &nbsp FAQS &nbsp Blog &nbsp Contact US
-            </p>
-            <br />
-            <p>
-              © 2020 REALESTATE. ALL RIGHTS RESERVED. CHIMPSTUDIO
-            </p>
-          </div>
-          <div class="col-md-6 text-right socially">
-            <div id="social">
-              <a class="facebookBtn smGlobalBtn" href="#" id="fb_link"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a class="twitterBtn smGlobalBtn" href="#" id="twitter_link"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a class="googleplusBtn smGlobalBtn" href="#" id="linked_link"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a class="linkedinBtn smGlobalBtn" href="#" id="insta_link"
-                ><i class="fab fa-instagram"></i
-              ></a>
-            </div>
-            <br />
-            <div class="mydiv">
-              <a href="" id="app_link">
-                <img class="myimage" src="images/app-image1.png" alt="" />
-              </a>
-              <a href="" id="play_link">
-                <img class="myimage" src="images/app-image2.png" alt="" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+		<section class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<p>
+							Home &nbsp Members &nbsp FAQS &nbsp Blog &nbsp
+							Contact US
+						</p>
+						<br />
+						<p>
+							© 2020 REALESTATE. ALL RIGHTS RESERVED. CHIMPSTUDIO
+						</p>
+					</div>
+					<div class="col-md-6 text-right socially">
+						<div id="social">
+							<a
+								class="facebookBtn smGlobalBtn"
+								href="#"
+								id="fb_link"
+								><i class="fab fa-facebook-f"></i
+							></a>
+							<a
+								class="twitterBtn smGlobalBtn"
+								href="#"
+								id="twitter_link"
+								><i class="fab fa-twitter"></i
+							></a>
+							<a
+								class="googleplusBtn smGlobalBtn"
+								href="#"
+								id="linked_link"
+								><i class="fab fa-linkedin-in"></i
+							></a>
+							<a
+								class="linkedinBtn smGlobalBtn"
+								href="#"
+								id="insta_link"
+								><i class="fab fa-instagram"></i
+							></a>
+						</div>
+						<br />
+						<div class="mydiv">
+							<a href="" id="app_link">
+								<img
+									class="myimage"
+									src="images/app-image1.png"
+									alt=""
+								/>
+							</a>
+							<a href="" id="play_link">
+								<img
+									class="myimage"
+									src="images/app-image2.png"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
-      integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
-      crossorigin="anonymous"
-    ></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+			integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+			crossorigin="anonymous"
+		></script>
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+			crossorigin="anonymous"
+		></script>
 
-    <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
 
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
+			function myFunction() {
+				var preloader = document.getElementById('load');
+				sessionStorage.clear();
+				setInterval(() => {
+					if (sessionStorage.getItem('load') == 'done') {
+						preloader.style.display = 'none';
+					}
+				}, 500);
+				//preloader.style.display="none";
+			}
 
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
+			function plusSlides(n) {
+				showSlides((slideIndex += n));
+			}
 
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-      }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/multi.js"></script>
-  </body>
+			function currentSlide(n) {
+				showSlides((slideIndex = n));
+			}
+
+			function showSlides(n) {
+				var i;
+				var slides = document.getElementsByClassName('mySlides');
+				var dots = document.getElementsByClassName('dot');
+				if (n > slides.length) {
+					slideIndex = 1;
+				}
+				if (n < 1) {
+					slideIndex = slides.length;
+				}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = 'none';
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(
+						' active',
+						''
+					);
+				}
+				slides[slideIndex - 1].style.display = 'block';
+				dots[slideIndex - 1].className += ' active';
+			}
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+		<script src="./js/index.js"></script>
+		<script src="./js/multi.js"></script>
+	</body>
 </html>

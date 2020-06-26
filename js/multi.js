@@ -16,7 +16,38 @@ const app_link = document.getElementById("app_link");
     
 // }
 
+async function sendEnquiry(evt) {
+    evt.preventDefault();
+    const msg = document.getElementById("enquiry_msg");
+    const query = window.location.search;
+    const params = new URLSearchParams(query);
+    const product = params.get("title");
+    const name = document.getElementById("fname").value;
+    const email = document.getElementById("lname");
+    if(email.value =="" || !email.validity.valid) {
+        msg.innerHTML = "Invalid Email";
+        return;
+    }
+    const contact = document.getElementById("cname").value;
+    const res = await axios.post(`${url}mail/enquiry`, {
+        name: name,
+        email: email.value,
+        contact: contact,
+        product: product
+    });
+    msg.innerHTML = res.data.title;
+}
+
 async function getPageData() {
+    const user_auth = await axios.post(`${url}postlogin`, {token: localStorage.getItem("token")});
+    if(user_auth.data.username) {
+        let name = user_auth.data.username;
+        let split = name.split("@");
+        name = split[0];
+        document.getElementById("logged_user").innerHTML = `
+            <i class="fas fa-user icons mr-1"></i>${name}
+        `
+    }
     const res = await axios.get(`${url}multi_data`);
     const data = res.data[0];
     fb_link.href = data.fb_link;
@@ -137,5 +168,7 @@ async function getFaqData() {
             }
         });
     }
+    sessionStorage.setItem("load", "done");
+
 }
 

@@ -100,7 +100,7 @@ async function getPropertyData() {
             img = `data:${property.images[0].contentType};base64,${property.images[0].file}`;
         }
         property_target.innerHTML += `
-            <div class="col-md-4">
+            <div class="col-md-4" onclick="window.location.href = 'propertydetails.html?id=${property._id}'">
                 <div class="card" style="width: 100%;">
                     <img
                         class="card-img-top"
@@ -115,13 +115,24 @@ async function getPropertyData() {
                             ${property.title}
                         </p>
                         <p>${property.address}</p>
-                        <p>Bedrooms: ${property.bedrooms} &nbsp; Bathrooms: ${property.bathrooms}</p>
-                        <p>Floors: ${property.floors}  &nbsp; SqFt: ${property.feet}</p>
+                        <p>
+                            <i class="fas fa-bed mr-2 icons"></i>
+                            Bedrooms: ${property.bedrooms}
+                            &nbsp;
+                            <i class="fas fa-restroom mr-2 ml-2 icons"></i>
+                            Bathrooms: ${property.bathrooms}
+                        </p>
+                        <p>
+                            <i class="fas fa-car mr-2 icons"></i>
+                            Floors: ${property.floors} &nbsp;&nbsp; SQFT: ${property.feet}
+                        </p>
                     </div>
                 </div>
             </div>
         `
     }
+    sessionStorage.setItem("load", "done");
+
 }
 
 async function contactSend(evt) {

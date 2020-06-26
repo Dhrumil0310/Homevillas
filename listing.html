@@ -17,13 +17,13 @@
     <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" /> -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body onload="getPageData(); getPropertyData();">
-
+  <body onload="myFunction(); getPropertyData(); getPageData();">
+    <div id="load"></div>
     <section class="topnav">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
-            <img src="images/homevillas-logo.png" alt="" id="header_logo" />
+            <img src="images/homevillas-logo.png" alt="" id="header_logo" class="brandLogo" />
           </div>
           <div class="col-md-2 text-right" style="float: right;">
             <p class="text-center">
@@ -93,7 +93,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="sign.html" id="logged_user" >
               <i class="fas fa-user icons mr-1"></i>
               Sign Up/ Register
             </a>
@@ -412,6 +412,25 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
+    <script>
+     var stop;
+      function myFunction() {
+				sessionStorage.clear();
+				stop = setInterval(() => {
+					if (sessionStorage.getItem('load') == 'done') {
+            stopLoad();
+          }
+				}, 1000);
+				//preloader.style.display="none";
+      }
+
+      function stopLoad() {
+        var preloader = document.getElementById('load');
+        clearInterval(stop);
+        preloader.style.display = "none";
+      }
+      
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="./js/multi.js"></script>
     <script src="./js/listing.js"></script>

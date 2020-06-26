@@ -3,6 +3,7 @@ const address = document.getElementById("address");
 const title = document.getElementById("title");
 const contact = document.getElementById("contact");
 const image_target = document.getElementById("image_target");
+const video = document.getElementById("video");
 const key = document.getElementById("key_target");
 const description = document.getElementById("description_target");
 const amenities = document.getElementById("amenities_target");
@@ -14,6 +15,7 @@ const similar_target = document.getElementById("similar_target");
 const realtor_name = document.getElementById("realtor_name");
 const realtor_email = document.getElementById("realtor_email");
 const realtor_contact = document.getElementById("realtor_contact");
+const enquire_btn = document.getElementById("enquire_btn");
 
 let data;
 
@@ -44,7 +46,14 @@ async function contactSend(token) {
     form_data.append("realtor", data.realtor);
     form_data.append("realtor_mail", data.email);
     const res = await axios.post(`${url}mail/contact`, form_data);
+    document.getElementById("mail_msg").innerHTML = res.data.title;
+  } else {
+    document.getElementById("mail_msg").innerHTML = "Please refresh page and try again";
   }
+}
+
+async function enquirySend(params) {
+  
 }
 
 function thisFunction(x) {
@@ -55,7 +64,7 @@ function thisFunction(x) {
       } else {
         form.style.margin = "20px 0";
       }
-      let height = document.body.children[3].clientHeight + document.body.children[4].clientHeight + document.body.children[5].clientHeight;
+      let height = document.body.children[4].clientHeight + document.body.children[5].clientHeight + document.body.children[6].clientHeight;
       // if(document.body.clientHeight < window.outerHeight*3) {
       //   height = document.body.clientHeight - window.outerHeight*1.1;
       // } else {
@@ -81,33 +90,51 @@ async function getPropertyData() {
     },
   });
   data = res.data[0];
-  let price_frame = "Rs. " + data.price;
+  enquire_btn.addEventListener('click', () => {
+    window.location.href = `form.html?title=${data.title}`
+  })
+  let price_frame = "Rs. " + data.price;  
   if (data.duration && data.duration != "") {
     price_frame = "Rs. " + data.price + " per " + data.duration;
   }
   price.innerHTML = price_frame;
-  address.innerHTML =
-    '<i class="fas fa-map-marker-alt mr-2"></i>' + data.address;
+
+  address.innerHTML = '<i class="fas fa-map-marker-alt mr-2"></i>' + data.address;
   title.innerHTML = data.title;
   contact.innerHTML = '<i class="fas fa-phone-alt mr-2"></i>' + data.contact;
   key.innerHTML = data.details;
   description.innerHTML = data.description;
+
+  if(data.video && data.video.length > 0) {
+    console.log("vid yes");
+    var vid = document.createElement("video");
+    var source = document.createElement("source");
+    source.type = data.video[0].contentType;
+    source.src = `data:${data.video[0].contentType};base64,${data.video[0].file}`;
+    vid.controls = true;
+    vid.style.width = "100%";
+    vid.style.height = "400px";
+    vid.appendChild(source);
+    video.appendChild(vid);
+  }
+
   image_target.innerHTML = "";
   for (image of data.images) {
     image_target.innerHTML += `
-            <div class="mySlides">
-                <div class="numbertext"></div>
-                <img
-                    src="data:${image.contentType};base64,${image.file}"
-                    style="width: 100%;"
-                />
-            </div>
-        `;
+      <div class="mySlides">
+        <div class="numbertext"></div>
+        <img
+          src="data:${image.contentType};base64,${image.file}"
+          style="width: 100%;"
+        />
+      </div>
+    `;
   }
   image_target.innerHTML += `
-        <a class="prev" onclick="plusSlides(-1)"> &#10094; </a>
-        <a class="next" onclick="plusSlides(1)"> &#10095; </a>
-    `;
+    <a class="prev" onclick="plusSlides(-1)"> &#10094; </a>
+    <a class="next" onclick="plusSlides(1)"> &#10095; </a>
+  `;
+
   let count = 0;
   let img_frame = `<div class="row container">`;
   for (image of data.images) {
@@ -132,12 +159,14 @@ async function getPropertyData() {
     },
   });
   showSlides(slideIndex);
+
   let num_amenities = data.features.length;
   if (num_amenities % 3 == 1) {
     num_amenities = Math.floor(num_amenities / 3);
   } else {
     num_amenities = Math.ceil(num_amenities / 3);
   }
+
   count = 0;
   amenities.innerHTML = "";
   let amenities_frame = "";
@@ -157,14 +186,17 @@ async function getPropertyData() {
     }
   }
   amenities.innerHTML = amenities_frame;
+
   if (data.documents[0]) {
     doc1.href = `data:${data.documents[0].contentType};base64,${data.documents[0].file}`;
+    // doc1.href = `data:${data.video[0].contentType};base64,${data.video[0].file}`
     doc1.download = "New Document 1";
   }
   if (data.documents[1]) {
     doc2.href = `data:${data.documents[1].contentType};base64,${data.documents[1].file}`;
     doc2.download = "New Document 2";
   }
+
   count = 0;
   plan_num.innerHTML = "Plans: &nbsp;";
   if (data.plans && data.plans.length > 0) {
@@ -178,14 +210,21 @@ async function getPropertyData() {
   } else {
     plan_num.innerHTML += "None";
   }
+
   if(data.realtor) {
     realtor_name.innerHTML = data.realtor;
+  } else {
+    realtor_name.innerHTML = "";
   }
   if(data.email) {
     realtor_email.innerHTML = data.email;
+  } else {
+    realtor_email.innerHTML = "";
   }
   if(data.contact) {
     realtor_contact.innerHTML = data.contact;
+  } else {
+    realtor_contact.innerHTML = "";
   }
 
   let similar = res.data;
@@ -223,6 +262,8 @@ async function getPropertyData() {
             </div>        
         `;
   }
+  sessionStorage.setItem("load", "done");
+
 }
 
 //Change Plan Image on Click
