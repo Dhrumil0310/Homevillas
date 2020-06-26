@@ -9,37 +9,65 @@ const linked_link = document.getElementById("linked_link");
 const twitter_link = document.getElementById("twitter_link");
 const play_link = document.getElementById("play_link");
 const app_link = document.getElementById("app_link");
+const name = document.getElementById("fname");
+const email = document.getElementById("lname");
+const contact = document.getElementById("cname");
+let user_auth = "";
+let stop_int;
+
 
 // async function onSubmit(token) {
 //     // const res = document.getElementById('demo-form').submit();
 //     const res = await axios.post(`${url}captcha`, { token: token });
     
 // }
+async function setDetails() {
+    if(localStorage.getItem("token")) {
+        stop_int = setInterval(() => {
+            if(user_auth.data.id) {
+                stopInt(user_auth.data.id);
+            }
+        }, 500);
+        
+    }
+}
 
+async function stopInt(id) {
+    clearInterval(stop_int);
+    const res = await axios.get(`${url}users`);
+    const data = res.data;
+    let target_user = "";
+    for (user of data) {
+        if(user._id == id) {
+            target_user = user;
+            break;
+        }
+    }
+    name.value = target_user.username;
+    email.value = target_user.email;
+    contact.value = target_user.contact;
+}
 async function sendEnquiry(evt) {
     evt.preventDefault();
     const msg = document.getElementById("enquiry_msg");
     const query = window.location.search;
     const params = new URLSearchParams(query);
     const product = params.get("title");
-    const name = document.getElementById("fname").value;
-    const email = document.getElementById("lname");
     if(email.value =="" || !email.validity.valid) {
         msg.innerHTML = "Invalid Email";
         return;
     }
-    const contact = document.getElementById("cname").value;
     const res = await axios.post(`${url}mail/enquiry`, {
         name: name,
         email: email.value,
-        contact: contact,
-        product: product
+        contact: contact.value,
+        product: product.value
     });
     msg.innerHTML = res.data.title;
 }
 
 async function getPageData() {
-    const user_auth = await axios.post(`${url}postlogin`, {token: localStorage.getItem("token")});
+    user_auth = await axios.post(`${url}postlogin`, {token: localStorage.getItem("token")});
     if(user_auth.data.username) {
         let name = user_auth.data.username;
         let split = name.split("@");

@@ -21,7 +21,7 @@
 		/> -->
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
-	<body onload="myFunction(); getPageData();">
+	<body onload="setDetails(); myFunction(); getPageData();">
 		<div id="load"></div>
 		<section class="topnav">
 			<div class="container">
@@ -146,7 +146,10 @@
 						placeholder="Your contact no.."
 					/>
 
-					<input type="submit" value="Submit" />
+					<input
+						type="submit"
+						value="I would like to buy this property"
+					/>
 				</form>
 			</div>
 		</section>
@@ -254,11 +257,9 @@
 			function myFunction() {
 				var preloader = document.getElementById('load');
 				sessionStorage.clear();
-				setInterval(() => {
-					if (sessionStorage.getItem('load') == 'done') {
-						preloader.style.display = 'none';
-					}
-				}, 500);
+				setTimeout(() => {
+					preloader.style.display = 'none';
+				}, 2000);
 				//preloader.style.display="none";
 			}
 		</script>

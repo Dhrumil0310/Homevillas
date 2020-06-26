@@ -819,8 +819,8 @@
 			showSlides(slideIndex);
 
 			function myFunction() {
-				var preloader = document.getElementById('load');
 				sessionStorage.clear();
+				var preloader = document.getElementById('load');
 				setInterval(() => {
 					if (sessionStorage.getItem('load') == 'done') {
 						preloader.style.display = 'none';

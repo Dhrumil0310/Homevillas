@@ -127,6 +127,13 @@
 					<div class="signup-form">
 						<p id="sign_msg"></p>
 						<input
+							id="sign_name"
+							type="text"
+							placeholder="Your Full Name"
+							class="input"
+							name="name"
+						/>
+						<input
 							id="sign_email"
 							type="email"
 							placeholder="Your Email Address"
@@ -154,7 +161,6 @@
 							name="otp"
 						/>
 						<input type="text" name="otp_id" id="otp_id" hidden />
-						<!-- <button onclick="genOtp(event)">otp</button> -->
 						<button class="btn" onclick="genOtp(event)">
 							Generate OTP
 						</button>
