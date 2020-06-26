@@ -399,7 +399,7 @@ html {
 	background: #d64521 !important;
 }
 
-/*contact us page*/
+/*Contact Us Page*/
 
 .info .cont {
 	padding-top: 50px;
@@ -436,7 +436,7 @@ html {
 	background-color: #5a2e8a !important;
 }
 
-/*contact form*/
+/*ContactUS - contact form*/
 
 .contact {
 	margin-top: 0;
@@ -758,39 +758,6 @@ textarea,
 	background-color: #f3f3f3 !important;
 }
 
-/*agency*/
-
-.agency {
-	padding: 80px 0;
-	background: #f1f1f1;
-}
-
-.agency .col-md-4 {
-	margin: 20px 0;
-}
-
-.agency .card-img-top {
-	/* border: 1px solid blue;
-  border-radius: 50%;*/
-	padding: 20px 0;
-	height: 50%;
-	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/*member packages*/
-
-table {
-	font-family: arial, sans-serif;
-}
-
-td,
-th {
-	border: 1px solid #dddddd;
-	text-align: center;
-}
-
 /*Property details*/
 
 .mycont {
@@ -990,36 +957,6 @@ th {
 	margin: 40px 0;
 	background-color: #fff;
 	padding: 30px 10px;
-}
-
-.yelp {
-	background-color: #fff;
-	padding: 20px 10px;
-}
-
-.yelp h5 {
-	font-size: 14px;
-	font-family: 'ROBOTO', sans-serif;
-	font-weight: 600;
-	letter-spacing: 1.2px;
-}
-
-.yelp p {
-	font-size: 12px;
-	font-family: 'ROBOTO', sans-serif;
-	font-weight: 600;
-	color: #a3a3a3 !important;
-	letter-spacing: 1.2px;
-}
-
-.walk {
-	margin: 40px 0;
-	background-color: #fff;
-	padding: 20px 10px;
-}
-
-.walk .icon {
-	font-size: 40px;
 }
 
 .floor {
@@ -1325,7 +1262,7 @@ ul {
 	clear: both;
 	width: 100%;
 	box-sizing: border-box;
-	height: 600px;
+	height: 550px;
 }
 
 .wrapper .input {

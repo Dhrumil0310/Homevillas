@@ -19,6 +19,7 @@
   </head>
   <body onload="myFunction(); getPropertyData(); getPageData();">
     <div id="load"></div>
+    
     <section class="topnav">
       <div class="container">
         <div class="row">
@@ -122,41 +123,13 @@
               <input type="checkbox" id="vehicle3" name="category[]" value="Other">
               <label for="vehicle3">Other</label><br>
               <br>
-              <!-- <h3>Open House</h3>
-              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-              <label for="vehicle1"> Today Only</label><br>
-              <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-              <label for="vehicle2">Tomorrow Only</label><br>
-              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-              <label for="vehicle3"> Till Week ends</label><br>
-              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-              <label for="vehicle3">Upcoming Weekend</label><br>
-              <br> -->
               <h3>Price</h3>
               <div class="row">
                 <div class="col-md-5">
-                  <!-- <select name="cars" id="cars">
-                    <option value="volvo">MIN</option>
-                    <option value="saab">20,00,000</option>
-                    <option value="saab">30,00,000</option>
-                    <option value="saab">40,00,000</option>
-                    <option value="saab">50,00,000</option>
-                    <option value="mercedes">60,00,000</option>
-                    <option value="audi">70,00,000</option>
-                  </select> -->
                   <input type="number" name="price_min" id="price_min" value="0">
                 </div>
                 <div class="col-md-2 mt-2">to</div>
                 <div class="col-md-5">
-                  <!-- <select name="cars" id="cars">
-                    <option value="volvo">MAX</option>
-                    <option value="saab">20,00,000</option>
-                    <option value="saab">30,00,000</option>
-                    <option value="saab">40,00,000</option>
-                    <option value="saab">50,00,000</option>
-                    <option value="mercedes">60,00,000</option>
-                    <option value="audi">70,00,000</option>
-                  </select> -->
                   <input type="number" name="price_max" id="price_max">
                 </div>
               </div>
@@ -172,8 +145,6 @@
               </div>
               <br>
               <div class="slidecontainer">
-                <!-- <h3>SQFT</h3>
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange"> -->
                 <h3 id="feet_text">SQFT: All</h3>
                 <input type="range" list="tickmarks" id="feet" style="width: 100%;" min="0" max="10" value="0">
                 <datalist id="tickmarks">
@@ -191,15 +162,6 @@
                 </datalist>
               </div>
               <br>
-              <!-- <div class="tenure">
-                  <h3>TENURE</h3>
-                  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                  <label for="vehicle1">Free hold</label><br>
-                  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                  <label for="vehicle2">Lease Hold</label><br>
-                  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                  <label for="vehicle3">Share of freehold</label><br>
-              </div> -->
               <div class="but3-container"><button class="but3" onclick="filterData()">Filter</button></div>
             </div>
           </div>
