@@ -59,7 +59,7 @@ async function enquirySend(params) {
 function thisFunction(x) {
   if (x.matches) {
     window.addEventListener("scroll", () => {
-      if(window.pageYOffset > 0) {
+      if(window.pageYOffset > 70) {
         form.style.margin = "-50px 0";
       } else {
         form.style.margin = "20px 0";
