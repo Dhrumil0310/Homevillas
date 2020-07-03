@@ -1,7 +1,7 @@
 const price = document.getElementById("price");
 const address = document.getElementById("address");
 const title = document.getElementById("title");
-const contact = document.getElementById("contact");
+const contact1 = document.getElementById("contact");
 const image_target = document.getElementById("image_target");
 const video = document.getElementById("video");
 const key = document.getElementById("key_target");
@@ -59,7 +59,7 @@ async function enquirySend(params) {
 function thisFunction(x) {
   if (x.matches) {
     window.addEventListener("scroll", () => {
-      if(window.pageYOffset > 0) {
+      if(window.pageYOffset > 70) {
         form.style.margin = "-50px 0";
       } else {
         form.style.margin = "20px 0";
@@ -101,12 +101,11 @@ async function getPropertyData() {
 
   address.innerHTML = '<i class="fas fa-map-marker-alt mr-2"></i>' + data.address;
   title.innerHTML = data.title;
-  contact.innerHTML = '<i class="fas fa-phone-alt mr-2"></i>' + data.contact;
+  contact1.innerHTML = '<i class="fas fa-phone-alt mr-2"></i>' + data.contact;
   key.innerHTML = data.details;
   description.innerHTML = data.description;
 
   if(data.video && data.video.length > 0) {
-    console.log("vid yes");
     var vid = document.createElement("video");
     var source = document.createElement("source");
     source.type = data.video[0].contentType;

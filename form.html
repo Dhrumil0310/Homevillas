@@ -21,13 +21,12 @@
 		/> -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body onload="myFunction(); getPageData();">
+  <body onload="setDetails(); myFunction(); getPageData();">
     <div id="load"></div>
-
     <section class="topnav">
       <div class="container">
         <div class="row">
-          <div class="col-md-10">
+          <div class="col-md-8">
             <img
               src="images/homevillas-logo.png"
               alt=""
@@ -42,15 +41,14 @@
               202-555-0182
             </p>
           </div>
-          <!-- <div class="col-md-2 thisbutton" style="float: right;">
+          <div class="col-md-2 thisbutton" style="float: right;">
             <button type="button" class="btn btn-outline-danger mybutton">
               CREATE PROPERTY
             </button>
-          </div> -->
+          </div>
         </div>
       </div>
     </section>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <button
         class="navbar-toggler"
@@ -109,45 +107,29 @@
       </div>
     </nav>
 
-    <section class="myform">
+    <section class="topnav">
       <div class="container">
-        <p id="enquiry_msg"></p>
-        <form onsubmit="sendEnquiry(event)">
-          <label for="fname">Name</label>
-          <input type="text" id="fname" name="name" placeholder="Your name.." />
-
-          <label for="lname">Email</label>
-          <input
-            type="email"
-            id="lname"
-            name="email"
-            placeholder="Your Email..."
-          />
-          <label for="lname">Contact No</label>
-          <input
-            type="text"
-            id="cname"
-            name="contact"
-            placeholder="Your contact no.."
-          />
-
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
-    </section>
-
-    <section class="brands">
-      <div class="container text-center">
-        <div class="row" id="partner_target">
-          <img src="images/partner03.png" alt="" />
-          <img src="images/partner05.png" alt="" />
-          <img src="images/partner04.png" alt="" />
-          <img src="images/partner06.png" alt="" />
-          <img src="images/partner08.png" alt="" />
-          <img src="images/partner09.png" alt="" />
-          <img src="images/partner10.png" alt="" />
-          <img src="images/partner11.png" alt="" />
-          <img src="images/partner12.png" alt="" />
+        <div class="row">
+          <div class="col-md-10">
+            <img
+              src="images/homevillas-logo.png"
+              alt=""
+              id="header_logo"
+              class="brandLogo"
+            />
+          </div>
+          <div class="col-md-2 text-right" style="float: right;">
+            <p class="text-center">
+              <span class="call">Call for Enquiry</span>
+              <br />
+              202-555-0182
+            </p>
+          </div>
+          <!-- <div class="col-md-2 thisbutton" style="float: right;">
+            <button type="button" class="btn btn-outline-danger mybutton">
+              CREATE PROPERTY
+            </button>
+          </div> -->
         </div>
       </div>
     </section>
@@ -220,11 +202,9 @@
       function myFunction() {
         var preloader = document.getElementById("load");
         sessionStorage.clear();
-        setInterval(() => {
-          if (sessionStorage.getItem("load") == "done") {
-            preloader.style.display = "none";
-          }
-        }, 500);
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 2000);
         //preloader.style.display="none";
       }
     </script>
