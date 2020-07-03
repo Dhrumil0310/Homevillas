@@ -23,7 +23,7 @@
     <section class="topnav">
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-10">
             <img src="images/homevillas-logo.png" alt="" id="header_logo" class="brandLogo" />
           </div>
           <div class="col-md-2 text-right" style="float: right;">
@@ -33,14 +33,22 @@
               202-555-0182
             </p>
           </div>
-          <div class="col-md-2 thisbutton" style="float: right;">
+          <!-- <div class="col-md-2 thisbutton" style="float: right;">
             <button type="button" class="btn btn-outline-danger mybutton">
               CREATE PROPERTY
             </button>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
+
+    <div class="fix">				
+        <button class="mybutton1" id="enquire_btn">
+          <i class="far fa-list-alt icons"></i>
+          <br>Enquire
+          now
+        </button>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <button
@@ -377,20 +385,21 @@
     <script>
      var stop;
       function myFunction() {
-				sessionStorage.clear();
-				stop = setInterval(() => {
-					if (sessionStorage.getItem('load') == 'done') {
-            stopLoad();
-          }
-				}, 1000);
-				//preloader.style.display="none";
+        var preloader = document.getElementById('load');
+				// sessionStorage.clear();
+				// stop = setInterval(() => {
+				// 	if (sessionStorage.getItem('load') == 'done') {
+        //     stopLoad();
+        //   }
+				// }, 1000);
+				preloader.style.display="none";
       }
 
-      function stopLoad() {
-        var preloader = document.getElementById('load');
-        clearInterval(stop);
-        preloader.style.display = "none";
-      }
+      // function stopLoad() {
+      //   var preloader = document.getElementById('load');
+      //   clearInterval(stop);
+      //   preloader.style.display = "none";
+      // }
       
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>

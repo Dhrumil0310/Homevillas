@@ -58,6 +58,37 @@ html {
   margin-top: 10px;
 }
 
+/*Enquiry button*/
+
+.fix {
+  position: fixed;
+  width: 190px;
+  height: 190px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  font-size: 28px;
+  z-index: 9999;
+}
+
+.fix .mybutton1 {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.mybutton1 {
+  color: #fff !important;
+  background-color: #5a2e8a !important;
+  border: none;
+  height: 190px;
+  width: 190px;
+  font-size: 14px;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 600;
+}
+
 /*navbar*/
 
 .navbar {
@@ -1160,7 +1191,7 @@ ul {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav .col-md-8 {
+  .topnav .col-md-10 {
     text-align: center;
   }
 
@@ -1168,7 +1199,7 @@ ul {
     text-align: center;
   }
   .topnav {
-    padding-bottom: 18px;
+    padding-bottom: 0px;
   }
 
   .topnav .thisbutton {
