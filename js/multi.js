@@ -9,6 +9,7 @@ const linked_link = document.getElementById("linked_link");
 const twitter_link = document.getElementById("twitter_link");
 const play_link = document.getElementById("play_link");
 const app_link = document.getElementById("app_link");
+const prop_title = document.getElementById("prop_title");
 const name = document.getElementById("fname");
 const email = document.getElementById("lname");
 const contact = document.getElementById("cname");
@@ -47,6 +48,7 @@ async function stopInt(id) {
     email.value = target_user.email;
     contact.value = target_user.contact;
 }
+
 async function sendEnquiry(evt) {
     evt.preventDefault();
     const msg = document.getElementById("enquiry_msg");
