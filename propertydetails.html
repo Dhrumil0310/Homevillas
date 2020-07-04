@@ -131,6 +131,7 @@
 			</div>
 		</nav>
 
+		<!-- <<<<<<< HEAD -->
 		<section class="mycont">
 			<div class="container">
 				<div class="row">
@@ -167,6 +168,45 @@
 										now
 									</button>
 									<!-- <button class="mybutton2">
+=======
+    <div class="fix1">
+      <button class="mybutton1" id="enquire_btn">
+        <i class="far fa-list-alt icons"></i>
+        <br />Enquire now
+      </button>
+    </div>
+
+    <section class="mycont">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-12">
+            <div class="First">
+              <div class="row">
+                <div class="col-md-7">
+                  <p>
+                    <span class="num" id="price">$21,500</span>
+                    &nbsp
+                    <a class="anc" href="#">Guide price</a>
+                  </p>
+                  <h3 id="title">
+                    New Superior Quality House For Sale
+                  </h3>
+                  <p id="address">
+                    <i class="fas fa-map-marker-alt mr-2"></i>104 High Street,
+                    Harrow-on-the-Hill, HA1 3LP
+                  </p>
+                  <p id="contact">
+                    <i class="fas fa-phone-alt mr-2"></i>0044 202 32391216
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <button class="mybutton1" id="enquire_btn">
+                    <i class="far fa-list-alt icons"></i>
+                    <br />Enquire<br />
+                    now
+                  </button>
+                  <-!-- <button class="mybutton2">
+>>>>>>> ca3acb1a078277d5a514370f2ffbd091226f23b5
 										<i
 											class="far fa-calendar-check icons"
 										></i>
@@ -532,19 +572,14 @@
 						<div class="reqdetails">
 							<div class="container">
 								<div class="row">
-									<div class="col-md-2">
-										<img
-											src="images/team-memeber35.jpg"
-											alt=""
-										/>
-									</div>
 									<div class="col-md-7">
-										<h4>Bostan Homes</h4>
-										<p>
+										<h3>Realtor Details:</h3>
+										<p id="realtor_name2">Bostan Homes</p>
+										<p id="realtor_email2">
 											84 St. Johns Wood High Street, St
 											Johns Wood
 										</p>
-										<p>020 2946 XXXX</p>
+										<p id="realtor_contact2">020 2946 XXXX</p>
 									</div>
 									<!-- <div class="col-md-3">
 										<button class="btn btn-danger mybutton">
@@ -562,14 +597,15 @@
 						<div class="container">
 							<div>
 								<div class="row">
-									<div class="col-md-4">
+									<!-- <div class="col-md-4">
 										<img
 											src="images/team-memeber35.jpg"
 											alt=""
 										/>
-									</div>
+									</div> -->
 									<div class="col-md-8">
-										<h3 id="realtor_name">Boston Homes</h3>
+										<h3>Contact Realtor</h3>
+										<p id="realtor_name">Boston Homes</h3>
 										<p id="realtor_email">
 											84 St. Johns Wood High Street, St
 											Johns Wood
@@ -577,7 +613,7 @@
 										<p id="realtor_contact">
 											020 2946 XXXX
 										</p>
-										<p id="mail_msg"></p>
+										<p id="mail_msg" style="color: red;"></p>
 									</div>
 								</div>
 								<form
@@ -593,6 +629,7 @@
 										type="email"
 										placeholder="Your Email Address *"
 										name="email"
+										id="realtor_contact_mail"
 									/>
 									<textarea
 										id="message"
@@ -815,16 +852,22 @@
 		<script>
 			var slideIndex = 1;
 			showSlides(slideIndex);
+			var stop;
 
 			function myFunction() {
+				sessionStorage.clear();
 				var preloader = document.getElementById('load');
-				// sessionStorage.clear();
-				// setInterval(() => {
-				//   if (sessionStorage.getItem("load") == "done") {
-				//     preloader.style.display = "none";
-				//   }
-				// }, 500);
-				preloader.style.display = 'none';
+				stop = setInterval(() => {
+					if (sessionStorage.getItem('load') == 'done') {
+						preloader.style.display = 'none';
+						stopLoad();
+					}
+				}, 500);
+				// preloader.style.display = 'none';
+			}
+
+			function stopLoad() {
+				clearInterval(stop);
 			}
 
 			// Next/previous controls

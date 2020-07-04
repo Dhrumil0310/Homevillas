@@ -3,7 +3,8 @@ const price_max = document.getElementById("price_max");
 const bedrooms = document.getElementById("bedrooms");
 const bathrooms = document.getElementById("bathrooms");
 const floors = document.getElementById("floors");
-const feet = document.getElementById("feet"); 
+const feet_min = document.getElementById("feet_min"); 
+const feet_max = document.getElementById("feet_max"); 
 const feet_text = document.getElementById("feet_text");
 const category = document.getElementsByName("category[]");
 
@@ -11,27 +12,31 @@ const category = document.getElementsByName("category[]");
 const property_target = document.getElementById("property_target");
 let properties;
 
-feet.addEventListener('mouseup', () => {
-    const feet_min = (parseInt(feet.value) - 1) * 1000;
-    const feet_max = parseInt(feet.value) * 1000;
-    if(feet.value == "10"){
-        feet_text.innerHTML = `SQFT: ${feet_min} and more`
-    }else if(feet.value == "0"){
-        feet_text.innerHTML = "SQFT: All";
-    }else {
-        feet_text.innerHTML = `SQFT: ${feet_min} - ${feet_max}`;
-    }
-})
+// feet.addEventListener('mouseup', () => {
+//     const feet_min = (parseInt(feet.value) - 1) * 1000;
+//     const feet_max = parseInt(feet.value) * 1000;
+//     if(feet.value == "10"){
+//         feet_text.innerHTML = `SQFT: ${feet_min} and more`
+//     }else if(feet.value == "0"){
+//         feet_text.innerHTML = "SQFT: All";
+//     }else {
+//         feet_text.innerHTML = `SQFT: ${feet_min} - ${feet_max}`;
+//     }
+// })
 
 async function getPropertyData() {
     const res = await axios.get(`${url}property`);
     properties = res.data;
     property_target.innerHTML = "";
     let max_value = 0;
+    let max_feet = 0;
     for (property of properties) {
         let img = "";
         if(property.price > max_value) {
             max_value = property.price;
+        }
+        if(property.feet > max_feet) {
+            max_feet = property.feet;
         }
         if(property.images && property.images.length > 0) {
             img = `data:${property.images[0].contentType};base64,${property.images[0].file}`
@@ -61,17 +66,18 @@ async function getPropertyData() {
         `
     }
     price_max.value = max_value;
+    feet_max.value = max_feet;
     sessionStorage.setItem("load", "done");
 
 }
 
 function filterData() {
     let filtered_properties = [];
-    let feet_min = (parseInt(feet.value) - 1) * 1000;
-    let feet_max = parseInt(feet.value) * 1000;
-    if(feet_max == 10000) {
-        feet_max = 999999;
-    }
+    // let feet_min = (parseInt(feet.value) - 1) * 1000;
+    // let feet_max = parseInt(feet.value) * 1000;
+    // if(feet_max == 10000) {
+    //     feet_max = 999999;
+    // }
     let categories = [];
     if(category[0].checked){
         categories.push("All");
@@ -96,9 +102,9 @@ function filterData() {
             }
         }
     }
-    if(feet.value > 0) {
+    if(feet_max.value != "") {
         filtered_properties = filtered_properties.filter(prop => {
-            return (prop.feet >= feet_min && prop.feet <= feet_max)
+            return (prop.feet >= feet_min.value && prop.feet <= feet_max.value)
         })
     }
     if(categories.length > 0 && categories[0]!="All") {

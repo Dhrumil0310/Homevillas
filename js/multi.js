@@ -23,6 +23,10 @@ let stop_int;
     
 // }
 async function setDetails() {
+    const query = window.location.search;
+    const params = new URLSearchParams(query);
+    const product = params.get("title");
+    prop_title.value = product;
     if(localStorage.getItem("token")) {
         stop_int = setInterval(() => {
             if(user_auth.data.id) {
@@ -52,18 +56,15 @@ async function stopInt(id) {
 async function sendEnquiry(evt) {
     evt.preventDefault();
     const msg = document.getElementById("enquiry_msg");
-    const query = window.location.search;
-    const params = new URLSearchParams(query);
-    const product = params.get("title");
     if(email.value =="" || !email.validity.valid) {
         msg.innerHTML = "Invalid Email";
         return;
     }
     const res = await axios.post(`${url}mail/enquiry`, {
-        name: name,
+        name: name.value,
         email: email.value,
         contact: contact.value,
-        product: product.value
+        product: prop_title.value
     });
     msg.innerHTML = res.data.title;
 }

@@ -43,10 +43,9 @@
     </section>
 
     <div class="fix">				
-        <button class="mybutton1" id="enquire_btn">
+        <button class="mybutton1" id="enquire_btn" onclick="window.location.href='form.html'">
           <i class="far fa-list-alt icons"></i>
-          <br>Enquire
-          now
+          <br>Enquire now
         </button>
     </div>
 
@@ -152,7 +151,17 @@
                 <input type="number" id="floors">
               </div>
               <br>
-              <div class="slidecontainer">
+              <h3 id="feet_text">SQFT</h3>
+              <div class="row">
+                <div class="col-md-5">
+                  <input type="number" name="feet_min" id="feet_min" value="0">
+                </div>
+                <div class="col-md-2 mt-2">to</div>
+                <div class="col-md-5">
+                  <input type="number" name="feet_max" id="feet_max">
+                </div>
+              </div>
+              <!-- <div class="slidecontainer">
                 <h3 id="feet_text">SQFT: All</h3>
                 <input type="range" list="tickmarks" id="feet" style="width: 100%;" min="0" max="10" value="0">
                 <datalist id="tickmarks">
@@ -168,7 +177,7 @@
                   <option value="9"></option>
                   <option value="10"></option>
                 </datalist>
-              </div>
+              </div> -->
               <br>
               <div class="but3-container"><button class="but3" onclick="filterData()">Filter</button></div>
             </div>
@@ -386,20 +395,20 @@
      var stop;
       function myFunction() {
         var preloader = document.getElementById('load');
-				// sessionStorage.clear();
-				// stop = setInterval(() => {
-				// 	if (sessionStorage.getItem('load') == 'done') {
-        //     stopLoad();
-        //   }
-				// }, 1000);
-				preloader.style.display="none";
+				sessionStorage.clear();
+				stop = setInterval(() => {
+					if (sessionStorage.getItem('load') == 'done') {
+            stopLoad();
+          }
+				}, 1000);
+				// preloader.style.display="none";
       }
 
-      // function stopLoad() {
-      //   var preloader = document.getElementById('load');
-      //   clearInterval(stop);
-      //   preloader.style.display = "none";
-      // }
+      function stopLoad() {
+        var preloader = document.getElementById('load');
+        clearInterval(stop);
+        preloader.style.display = "none";
+      }
       
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>

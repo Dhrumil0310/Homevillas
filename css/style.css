@@ -78,6 +78,24 @@ html {
   right: 20px;
 }
 
+.fix1 {
+  position: fixed;
+  width: 190px;
+  height: 190px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  font-size: 28px;
+  z-index: 9999;
+}
+
+.fix1 .mybutton1 {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
 .mybutton1 {
   color: #fff !important;
   background-color: #5a2e8a !important;
