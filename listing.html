@@ -392,21 +392,15 @@
       crossorigin="anonymous"
     ></script>
     <script>
-     var stop;
-      function myFunction() {
-        var preloader = document.getElementById('load');
-				sessionStorage.clear();
-				stop = setInterval(() => {
-					if (sessionStorage.getItem('load') == 'done') {
-            stopLoad();
-          }
-				}, 1000);
-				// preloader.style.display="none";
-      }
-
-      function stopLoad() {
-        var preloader = document.getElementById('load');
-        clearInterval(stop);
+      
+     function myFunction() {
+        var preloader = document.getElementById("load");
+        // sessionStorage.clear();
+        // setInterval(() => {
+        // 	if (sessionStorage.getItem('load') == 'done') {
+        // 		preloader.style.display = 'none';
+        // 	}
+        // }, 500);
         preloader.style.display = "none";
       }
       
