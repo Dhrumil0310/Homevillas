@@ -1,4 +1,4 @@
 # Homevillas
 
 Frontend:
-homevillas.netlify.app
+https://homevillas.netlify.app
